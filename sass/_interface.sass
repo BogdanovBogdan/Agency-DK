@@ -1,0 +1,124 @@
+*, ::after, ::before
+	box-sizing: border-box
+
+html
+	font-size: 10px
+	scroll-behavior: smooth
+
+body
+	font-family: 'Intro', sans-serif
+	font-size: 1.6rem
+	overflow-x: hidden
+	background: url("../img/background.jpg") center no-repeat
+	background-size: cover
+
+button
+	text-align: center
+	border: none
+	cursor: pointer
+	color: inherit
+	font-family: inherit
+	font-size: inherit
+	white-space: nowrap
+	&:focus
+		outline: none
+
+ul
+	padding: 0
+	margin: 0
+
+li
+	list-style: none
+
+input
+	border: none
+	&:focus
+		outline: none
+
+*:focus
+	outline: none
+
+img
+	width: 100%
+	height: auto
+
+a
+	text-decoration: none
+	color: inherit
+
+h1, h2, h3, h4
+	margin: 0
+
+
+.section
+	padding: 100px 0 100px
+	&__top
+		position: relative
+		display: flex
+		justify-content: center
+	&__title 
+		position: relative
+		color: #ffffff
+		font-size: 7.2rem
+		font-family: "Montserrat", sans-serif
+		&::before
+			content: ''
+			position: absolute
+			width: 753px
+			height: 5px
+			background: $red
+			bottom: -17px
+			left: 0
+	&__square-big
+		position: absolute
+		max-width: 900px
+		width: 900px
+		height: 1174px
+		top: -89px
+		right: -40px
+		border: solid 7px $purple
+	&__square-small
+		position: absolute
+		width: 697px
+		height: 148px
+		border: solid 7px #ffffff
+		background: transparent
+		top: -26px
+		left: -49px
+	&__btn 
+		background: #1b262f
+		width: 359px
+		height: 81px
+		padding: 1rem
+		font-size: 2.4rem
+		color: #fff
+	
+// creating adaptability with the calc() property
+@media screen and (min-width: 448px) and (max-width: 574px)
+	header, section, footer
+		padding-left: calc(50% - 209px) !important
+		padding-right: calc(50% - 209px) !important
+
+
+@media screen and (min-width: 575px) and (max-width: 766px)
+	header, section, footer
+		padding-left: calc(50% - 272.5px) !important
+		padding-right: calc(50% - 272.5px) !important
+
+
+@media screen and (min-width: 767px) and (max-width: 991px)
+	header, section, footer
+		padding-left: calc(50% - 368.5px) !important
+		padding-right: calc(50% - 368.5px) !important
+
+
+@media screen and (min-width: 992px) and (max-width: 1169px)
+	header, section, footer
+		padding-left: calc(50% - 480.5px) !important
+		padding-right: calc(50% - 480.5px) !important
+
+
+@media screen and (min-width: 1170px)
+	header, section, footer
+		padding-left: calc(50% - 570px) !important
+		padding-right: calc(50% - 570px) !important
