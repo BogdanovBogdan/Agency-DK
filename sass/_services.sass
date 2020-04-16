@@ -1,0 +1,111 @@
+.services
+	&__top
+		margin-bottom: 65px
+	&__title
+		&:before
+			content: ''
+			position: absolute
+			width: 880px
+			height: 5px
+			background: $red
+			bottom: -7px
+			left: 0
+	&__square-big
+		position: absolute
+		max-width: 900px
+		width: 983px
+		height: 649px
+		top: -36px
+		left: -153px
+		border: solid 7px $purple
+	&__square-small
+		position: absolute
+		width: 632px
+		height: 162px
+		border: solid 7px #ffffff
+		background: transparent
+		top: -10px
+		right: -48px
+
+	&-card
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		&__item
+			$borderSizeCard: 6px
+			display: flex
+			flex: 0 1 32%
+			flex-wrap: wrap
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+			min-height: 452px
+			padding: 46px 20px 37px
+			&:before
+				content: ''
+				position: absolute
+				background: $white
+				border: $borderSizeCard solid $white
+				box-sizing: content-box
+			&--one
+				border: solid 6px $white
+				position: relative
+				background: url('../img/card-bg.jpg') top center no-repeat #20222f
+				&:before
+					bottom: 2 - $borderSizeCard
+					left: 50%
+					transform: translateX(-50%)
+					height: 50%
+					width: 100%
+			&--two
+				border: solid 6px $purple
+				position: relative
+				background: url('../img/card-bg.jpg') bottom center no-repeat #20222f
+				&:before
+					top: 0 - $borderSizeCard
+					left: 50%
+					transform: translateX(-50%)
+					height: 50%
+					width: 100%
+			&--three
+				border: solid 6px $red
+				position: relative
+				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #20222f
+				&:before
+					bottom: 50%
+					right: 0 - $borderSizeCard
+					transform: translateY(50%)
+					height: 100%
+					width: 50%
+		&__title
+			font-size: 2.4rem
+			text-align: center
+			color: #fff
+			text-transform: uppercase
+			margin-bottom: 20px
+			mix-blend-mode: difference
+		&__desc
+			color: #fff
+			font-size: 2.4rem
+			font-family: Montserrat, sans-serif
+			font-weight: 600
+			mix-blend-mode: difference
+		&__info
+			margin-bottom: 32px
+			text-align: center
+		&__btn
+			color: #fff
+			padding: 23px 40px
+			max-width: 307px
+			width: 100%
+			text-align: center
+			font-family: Montserrat, sans-serif
+			font-size: 2.4rem
+			font-weight: 500
+			z-index: 1
+
+
+
+
+

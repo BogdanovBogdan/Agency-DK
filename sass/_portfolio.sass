@@ -1,147 +1,179 @@
 .portfolio
-   &__square
-      position: absolute
-      max-width: 900px
-      width: 100%
-      height: 1174px
-      border: solid 7px $purple
-   &__top
-      margin-bottom: 88px
-   &__works
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
-   &-work
-      flex: 0 1 33%
-      position: relative
-      max-width: 359px
-      width: 100%
-      min-height: 488px
-      margin-bottom: 26px
-      overflow: hidden
-      position: relative
-      &__link
-         position: absolute
-         // display: block
-         top: 0
-         left: 0
-         width: 100%
-         height: 100%
-      &__overlay
-         position: absolute
-         top: 0
-         left: 0
-         width: 100%
-         height: 100%
-         background: #000
-         opacity: 0.8
-         z-index: 2
-         transition: all 0.7s ease-in-out
-      &__title
-         position: absolute
-         z-index: 3
-         font-family: "Miratrix", sans-serif
-         font-size: 3rem
-         text-transform: uppercase
-         color: #ffffff
-         transition: all 0.7s ease-in-out
-         &--first
-            top: 0
-            left: 50%
-            transform: translateX(-50%)
-            word-wrap: break-word
-            width: 30px // calc !!!!!!!!!
-            text-align: center
-            &::before
-               content: ''
-               position: absolute
-               background: $red
-               width: 5px
-               height: 100%
-               top: 0
-               left: -8px
-         &--second
-            top: auto
-            left: auto
-            bottom: 17%
-            right: 1%
-            &::before
-               content: ''
-               position: absolute
-               background: $purple
-               height: 5px
-               width: 100%
-               top: -4px
-               left: 0
-         &--third
-            top: 21%
-            left: auto
-            right: 1%
-            &::before
-               content: ''
-               position: absolute
-               background: #898989
-               height: 5px
-               width: 100%
-               bottom: -13px
-               left: 0
-         &--fourth
-            left: 1%
-            top: 50%
-            &::before
-               content: ''
-               position: absolute
-               background: #898989
-               height: 5px
-               width: 100%
-               bottom: -8px
-               left: 0
-         &--fifth
-            left: 50%
-            transform: translateX(-50%)
-            top: auto
-            bottom: 1%
-            word-wrap: break-word
-            width: 30px // calc !!!!!!!!!
-            text-align: center
-            &::before
-               content: ''
-               position: absolute
-               background: $red
-               width: 5px
-               height: 100%
-               top: 0
-               right: -10px
-         &--sixth
-            left: 1%
-            top: 22%
-            &::before
-               content: ''
-               position: absolute
-               background: $purple
-               height: 5px
-               width: 100%
-               top: -9px
-               left: 0
-
+	&__title
+		&:before
+			content: ''
+			position: absolute
+			width: 753px
+			height: 5px
+			background: $red
+			bottom: -17px
+			left: 0
+	&__square-big
+		position: absolute
+		max-width: 900px
+		width: 900px
+		height: 1174px
+		top: -89px
+		right: -60px
+		border: solid 7px $purple
+	&__square-small
+		position: absolute
+		width: 697px
+		height: 148px
+		border: solid 7px #ffffff
+		background: transparent
+		top: -26px
+		left: -49px
+	&__top
+		margin-bottom: 88px
+	&__works
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 70px
+	&-work
+		flex: 0 1 33%
+		position: relative
+		max-width: 359px
+		width: 100%
+		min-height: 488px
+		margin-bottom: 26px
+		overflow: hidden
+		position: relative
+		&__link
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+		&__overlay
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: #000
+			opacity: 0.8
+			z-index: 2
+			transition: all 0.7s ease-in-out
+		&__title
+			position: absolute
+			z-index: 3
+			font-family: "Miratrix", sans-serif
+			font-size: 3rem
+			text-transform: uppercase
+			color: #ffffff
+			transition: all 0.7s ease-in-out
+			&--first
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				word-wrap: break-word
+				width: 26px // calc !!!!!!!!!
+				text-align: center
+				&::before
+					content: ''
+					position: absolute
+					background: $red
+					width: 5px
+					height: 100%
+					top: 0
+					left: -8px
+			&--second
+				top: auto
+				left: auto
+				bottom: 17%
+				right: 1%
+				&::before
+					content: ''
+					position: absolute
+					background: $purple
+					height: 5px
+					width: 100%
+					top: -4px
+					left: 0
+			&--third
+				top: 21%
+				left: auto
+				right: 1%
+				&::before
+					content: ''
+					position: absolute
+					background: #898989
+					height: 5px
+					width: 100%
+					bottom: -13px
+					left: 0
+			&--fourth
+				left: 1%
+				top: 50%
+				&::before
+					content: ''
+					position: absolute
+					background: #898989
+					height: 5px
+					width: 100%
+					bottom: -8px
+					left: 0
+			&--fifth
+				left: 50%
+				transform: translateX(-50%)
+				top: auto
+				bottom: 1%
+				word-wrap: break-word
+				width: 26px // calc !!!!!!!!!
+				text-align: center
+				&::before
+					content: ''
+					position: absolute
+					background: $red
+					width: 5px
+					height: 100%
+					top: 0
+					right: -10px
+			&--sixth
+				left: 1%
+				top: 22%
+				&::before
+					content: ''
+					position: absolute
+					background: $purple
+					height: 5px
+					width: 100%
+					top: -9px
+					left: 0
+	&__action
+		display: flex
+		align-items: center
+		justify-content: center
+	&__btn
+		font-size: 2.4rem
+		text-transform: uppercase
+		color: #fff
+		padding: 31px 83px
+		border: 5px solid $purple
+		transition: all .3s
+		&:hover
+			background: $purple
+		
 .animation
-  &-up:hover
-    > .portfolio-work__title
-      top: -100%
-    > .portfolio-work__overlay
-      top: 100%
-  &-down:hover 
-    > .portfolio-work__title
-      bottom: -100%
-    > .portfolio-work__overlay
-      top: -100%
-  &-left:hover 
-    > .portfolio-work__title
-      left: -100%
-    > .portfolio-work__overlay
-      left: 100%
-  &-right:hover 
-    > .portfolio-work__title
-      right: -100%
-    > .portfolio-work__overlay
-      left: -100%
+	&-up:hover
+		> .portfolio-work__title
+			top: -100%
+		> .portfolio-work__overlay
+			top: 100%
+	&-down:hover
+		> .portfolio-work__title
+			bottom: -100%
+		> .portfolio-work__overlay
+			top: -100%
+	&-left:hover
+		> .portfolio-work__title
+			left: -100%
+		> .portfolio-work__overlay
+			left: 100%
+	&-right:hover
+		> .portfolio-work__title
+			right: -100%
+		> .portfolio-work__overlay
+			left: -100%

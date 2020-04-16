@@ -1,71 +1,54 @@
 .nav
-   display: flex
-   color: #fff
-   max-height: 6.2rem
-   height: 100%
-   font-family: Montserrat, sans-serif
-   font-size: 2rem
-   &__logo
-      padding: 23px 14px
-      @include center
-      font-family: "Miratrix", sans-serif
-      font-size: 2.15rem
-      text-align: center
-      color: #ffffff
-      background-color: #ed6663
-      margin-right: 5rem
-   &__menu
-      display: flex
-      align-items: center
-      &-item
-         height: 100%
-      &-link
-         padding: 0 29px
-         height: 100%
-         @include center
-   &__info
-      margin-left: 115px
-      display: flex
-      &-item
-         @include center
-         white-space: nowrap
-         &:not(:last-child)
-            margin-right: 58px
-         &--btn
-            padding: 0 19px
-            max-height: 55px
-            height: 100%
-            cursor: pointer
-            border: solid 3px $purple
-            background-color: transparent
+	display: flex
+	color: #fff
+	max-height: 6.2rem
+	height: 100%
+	font-family: Montserrat, sans-serif
+	font-size: 2rem
+	&__logo
+		padding: 23px 14px
+		@include center
+		font-family: "Miratrix", sans-serif
+		font-size: 2.15rem
+		text-align: center
+		color: #ffffff
+		background-color: #ed6663
+		margin-right: 5rem
+	&__menu
+		display: flex
+		align-items: center
+		&-item
+			height: 100%
+		&-link
+			padding: 0 29px
+			height: 100%
+			@include center
+	&__info
+		margin-left: 115px
+		display: flex
+		&-item
+			@include center
+			white-space: nowrap
+			&:not(:last-child)
+				margin-right: 58px
+			&--btn
+				padding: 0 19px
+				max-height: 55px
+				height: 100%
+				cursor: pointer
+				border: solid 3px #77317a
+				background-color: transparent
+				transition: all .3s
+				&:visited
+					background-color: #734475
+				&:hover
+					border-color: $purple
 
-.icon
-   position: relative
-   &-behance
-      width: 65px
-      height: 41px
-      &::before
-         content: ''
-         position: absolute
-         height: 1px
-         width: 100%
-         color: #fff
-         top: 50%
-         transform: translateY(-50%)
-         left: 0
-      &:after
-         content: 'n'
-   &-inst
-      width: 41px
-      height: 41px
-      &::before
-         content: ''
-         position: absolute
-         height: 1px
-         width: 100%
-         color: #fff
-         top: 50%
-         transform: translateY(-50%)
-         right: 0
+.btn-red
+	background-color: $red
+	transition: all .3s
+	&:hover
+		background-color: #db504c
+
 
 
