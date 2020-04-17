@@ -7,28 +7,33 @@
 	font-size: 2rem
 	&__logo
 		padding: 23px 14px
-		@include center
 		font-family: "Miratrix", sans-serif
 		font-size: 2.15rem
 		text-align: center
 		color: #ffffff
 		background-color: #ed6663
 		margin-right: 5rem
+		@include center
 	&__menu
 		display: flex
 		align-items: center
 		&-item
 			height: 100%
+			transition: all .3s
 		&-link
 			padding: 0 29px
 			height: 100%
 			@include center
+			&:hover
+				color: $purple
+			&:focus
+				color: #7c4a77
 	&__info
 		margin-left: 115px
 		display: flex
 		&-item
-			@include center
 			white-space: nowrap
+			@include center
 			&:not(:last-child)
 				margin-right: 58px
 			&--btn
@@ -39,11 +44,95 @@
 				border: solid 3px #77317a
 				background-color: transparent
 				transition: all .3s
-				&:visited
-					background-color: #734475
 				&:hover
 					border-color: $purple
+				&:focus
+					border-color: #734475
 
+.form-callback 
+	font-family: Montsarrat, sans-serif
+	&__title
+		font-size: 3rem
+		font-weight: bold
+		text-align: center
+		margin-bottom: 29px
+	&__hint
+		font-size: 1.7rem
+		text-align: center
+		margin-bottom: 33px
+	&__input
+		padding: 29px 32px
+		border: solid 1px #ffffff
+		color: #fff
+		background-color: transparent
+		display: block
+		width: 100%
+		font-size: 1.6rem
+		line-height: 1.2
+		text-align: left
+		transition: all .3s ease-out
+		&:hover
+			background-color: rgba(199, 58, 184, 0.051)
+		&:focus
+			background-color: rgba(199, 58, 184, 0.2)
+		&::placeholder
+			color: #fff
+		&:not(:last-of-type) 
+			margin-bottom: 20px
+		&-wrapper
+			margin-bottom: 38px
+	&__checkbox 
+		display: flex
+		align-items: center
+		justify-content: left
+		margin-bottom: 38px
+		label
+			font-size: 1.4rem
+		input
+			position: absolute
+			display: none
+			opacity: 0
+			&:checked + span
+				background: $purple
+				border: 1px solid $purple
+				&:after
+					background: #fff
+					transform: translate(18px, -50%)
+		span
+			display: inline-block
+			margin-right: 25px
+			width: 40px
+			height: 20px
+			border-radius: 6px
+			vertical-align: middle
+			transition: .1s .1s ease-in-out
+			position: relative
+			background: #fff
+			border: 1px solid #fff
+			box-sizing: border-box
+			&:after
+				content: " "
+				position: absolute
+				display: block
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				box-shadow: 1px 1px 5px 0px rgba(57, 57, 57, 0.4)
+				background: $purple
+				left: 3px
+				top: 50%
+				transform: translateY(-50%)
+				transition: .25s .03s ease-in-out
+			&:hover
+				cursor: pointer
+				border: 1px solid $purple
+	&__btn
+		text-align: center
+		font-weight: bold
+		font-size: 2rem
+		width: 100%
+		height: 71px
+	
 .btn-red
 	background-color: $red
 	transition: all .3s
