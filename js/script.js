@@ -1,6 +1,24 @@
 window.addEventListener("DOMContentLoaded", () => {
 	"use strict";
 
+	// smooth scrolling to anchors
+	const anchors = document.querySelectorAll('a[href*="#"]')
+
+	for (let anchor of anchors) {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault()
+
+			const blockID = anchor.getAttribute('href').replace('#', '');
+
+			document.getElementById(blockID).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+			})
+		})
+	}
+
+
+
 	const bindModals = (triggerSelectors, modalSelector, closeSelector) => {
 		const triggers = document.querySelectorAll(triggerSelectors),
 			modal = document.querySelector(modalSelector),
@@ -35,7 +53,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 	const forms = () => {
-		const forms = document.querySelectorAll("form"), 
+		const forms = document.querySelectorAll("form"),
 			inputs = document.querySelectorAll("input");
 
 		const message = {
@@ -49,11 +67,11 @@ window.addEventListener("DOMContentLoaded", () => {
 				item.valut = "";
 			});
 		};
-		
+
 		const postData = async (url, data) => {
 			ducument.querySelector(".status-message").textContent = message.loading;
 			let res = await fetch(url, {
-				method: post, 
+				method: post,
 				body: data
 			});
 			return await res.text();
@@ -70,18 +88,19 @@ window.addEventListener("DOMContentLoaded", () => {
 				const formData = new FormData(item);
 
 				postData("../server.php", formData)
-					.then(res => {
-						consolo.log("data = ", res);
-						statusMessage.textContent = message.success;
-					})
-					.catch(() => statusMessage.textContent = message.failure)
-					.finally(() => {
-						clearInputs();
-						setTimeout(() => {
-                     statusMessage.remove();
-                  }, 5000);
-					});
-
+				.then(res => {
+					consolo.log("data = ", res);
+					statusMessage.textContent = message.success;
+				})
+				.catch(() => statusMessage.textContent = message.failure)
+				.finally(() => {
+					clearInputs();
+					setTimeout(() => {
+						statusMessage.remove();
+					}, 5000);
+				});
+					
+				console.log("dataForm =", )
 			});
 		});
 	};

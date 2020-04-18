@@ -32,20 +32,18 @@
 		justify-content: space-between
 		margin-bottom: 70px
 	&-work
-		flex: 0 1 33%
+		flex: 0 1 30%
 		position: relative
 		max-width: 359px
 		width: 100%
-		min-height: 488px
 		margin-bottom: 26px
 		overflow: hidden
 		position: relative
-		&__link
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
+		img
 			height: 100%
+			object-fit: cover
+		&:not(:nth-child(3n+3))
+			margin-right: 3rem
 		&__overlay
 			position: absolute
 			top: 0
