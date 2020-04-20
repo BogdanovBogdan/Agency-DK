@@ -16,6 +16,7 @@
 		text-shadow: 0px 1px 0 rgb(255,255,255),0px -1px 0 rgb(255,255,255),1px 0px 0 rgb(255,255,255),-1px 0px 0 rgb(255,255,255),1px 1px 0 rgb(255,255,255),1px -1px 0 rgb(255,255,255),-1px 1px 0 rgb(255,255,255),-1px -1px 0 rgb(255,255,255);
 		position: relative
 		letter-spacing: 1.5px;
+		transition: all .3s
 		&::before
 			content: 'Креативное агенство'
 			position: absolute
@@ -23,6 +24,8 @@
 			left: 0
 			text-shadow: 0px 0px 13px #C73AB8
 			z-index: -1
+		&:hover
+			color: #fff
 	&__subtitle
 		font-family: "Miratrix", sans-serif
 		font-size: 5.5rem

@@ -32,6 +32,8 @@
 		justify-content: space-between
 		align-items: center
 		position: relative
+		// color: #1b262f
+		color: #fff
 		&__item
 			$borderSizeCard: 6px
 			display: flex
@@ -51,7 +53,7 @@
 			&--one
 				border: solid 6px $white
 				position: relative
-				background: url('../img/card-bg.jpg') top center no-repeat #20222f
+				background: url('../img/card-bg.jpg') top center no-repeat #17292b
 				&:before
 					bottom: 2 - $borderSizeCard
 					left: 50%
@@ -61,7 +63,7 @@
 			&--two
 				border: solid 6px $purple
 				position: relative
-				background: url('../img/card-bg.jpg') bottom center no-repeat #20222f
+				background: url('../img/card-bg.jpg') bottom center no-repeat #17292b
 				&:before
 					top: 0 - $borderSizeCard
 					left: 50%
@@ -71,7 +73,7 @@
 			&--three
 				border: solid 6px $red
 				position: relative
-				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #20222f
+				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #17292b
 				&:before
 					bottom: 50%
 					right: 0 - $borderSizeCard
@@ -81,16 +83,16 @@
 		&__title
 			font-size: 2.4rem
 			text-align: center
-			color: #fff
 			text-transform: uppercase
 			margin-bottom: 20px
-			mix-blend-mode: difference
+			z-index: 1
+			// mix-blend-mode: difference
 		&__desc
-			color: #fff
 			font-size: 2.4rem
 			font-family: Montserrat, sans-serif
 			font-weight: 600
-			mix-blend-mode: difference
+			z-index: 1
+			// mix-blend-mode: difference
 		&__info
 			margin-bottom: 32px
 			text-align: center
