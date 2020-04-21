@@ -2,233 +2,245 @@
 <html lang="ru">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>Document</title>
-   <link rel="stylesheet" href="css/normalize.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
 
-   <header class="header">
-      <nav class="nav">
-         <div class="nav__logo">адк</div>
-         <ul class="nav__menu">
-            <li class="nav__menu-item"><a href="#portfolio" class="nav__menu-link">Портфолио</a></li>
-            <li class="nav__menu-item"><a href="#services" class="nav__menu-link">Услуги</a></li>
-            <li class="nav__menu-item"><a href="#contacts" class="nav__menu-link">Контакты</a></li>
-         </ul>
-         <div class="nav__info">
-            <a href="tel:+79094479154" class="nav__info-item">+7 (909) 447-91-54</a>
-            <button class="nav__info-item nav__info-item--btn" id="callback-request">Заказать звонок</button>
-         </div>
-      </nav>
-      <div class="head">
-         <h1 class="head__title">Креативное агенство</h1>
-         <h2 class="head__subtitle">Дмитрия каминского </h2>
-         <a href="#portfolio" class="head__btn btn-red">Наши работы</a>
-         <div class="head__social">
-            <a href="https://www.behance.net/dmitriikaminsk" target="_blank">
-               <svg class="head__icon head__icon--behance">
-                  <use xlink:href="img/sprite.svg#icon-behance"></use>
-               </svg>
-            </a>
-            <a href="https://www.instagram.com/design_kaminski/" target="_blank">
-               <svg class="head__icon head__icon--inst">
-                  <use xlink:href="img/sprite.svg#icon-inst"></use>
-               </svg>
-            </a>
-         </div>
-      </div>
-   </header>
+	<header class="header">
+		<nav class="nav">
+			<div class="nav__logo">адк</div>
+			<ul class="nav__menu">
+				<li class="nav__menu-item"><a href="#portfolio" class="nav__menu-link">Портфолио</a></li>
+				<li class="nav__menu-item"><a href="#services" class="nav__menu-link">Услуги</a></li>
+				<li class="nav__menu-item"><a href="#contacts" class="nav__menu-link">Контакты</a></li>
+			</ul>
+			<div class="nav__info">
+				<a href="tel:+79094479154" class="nav__info-item">+7 (909) 447-91-54</a>
+				<button class="nav__info-item nav__info-item--btn" id="callback-request">Заказать звонок</button>
+			</div>
+		</nav>
+		<div class="head">
+			<h1 class="head__title">Креативное агенство</h1>
+			<h2 class="head__subtitle">Дмитрия каминского </h2>
+			<a href="#portfolio" class="head__btn btn-red">Наши работы</a>
+			<div class="head__social">
+				<a href="https://www.behance.net/dmitriikaminsk" target="_blank">
+					<svg class="head__icon head__icon--behance">
+						<use xlink:href="img/sprite.svg#icon-behance"></use>
+					</svg>
+				</a>
+				<a href="https://www.instagram.com/design_kaminski/" target="_blank">
+					<svg class="head__icon head__icon--inst">
+						<use xlink:href="img/sprite.svg#icon-inst"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
 
-   <section class="section portfolio" id="portfolio">
-      <div class="section__top portfolio__top">
-         <div class="section__title portfolio__title">Портфолио
-            <span class="portfolio__square-big"></span>
-            <span class="portfolio__square-small"></span>
-         </div>
-      </div>
-      <div class="portfolio__works">
-         <div class="portfolio-work animation-up">
-            <a href="https://www.behance.net/gallery/84351865/FAT-MAN" class="portfolio-work__link" target="_blank">
-               <img src="img/portfolio/work-1.jpg" alt="Фитнес-центр" class="portfolio-work__img">
-            </a>
-            <div class="portfolio-work__overlay"></div>
-            <div class="portfolio-work__title portfolio-work__title--first">Фитнес-центр</div>
-         </div>
-         <div class="portfolio-work animation-right">
-            <a href="https://www.behance.net/gallery/85654211/gruppovoj-tur-v-dombaj" class="portfolio-work__link" target="_blank">
-               <img src="img/portfolio/work-2.jpg" alt="Групповой тур" class="portfolio-work__img">
-            </a>
-            <div class="portfolio-work__overlay"></div>
-            <div class="portfolio-work__title portfolio-work__title--second">Групповой тур</div>
-         </div>
-         <div class="portfolio-work animation-right">
-            <a href="https://www.behance.net/gallery/94612179/dirizhabl-internet-supermarket" class="portfolio-work__link" target="_blank">
-               <img src="img/portfolio/work-3.jpg" alt="Интернет-магазин" class="portfolio-work__img">
-            </a>
-            <div class="portfolio-work__overlay"></div>
-            <div class="portfolio-work__title portfolio-work__title--third">Интернет-магазин</div>
-         </div>
-         <div class="portfolio-work animation-left">
-            <a href="https://www.behance.net/gallery/87207043/ne-agenstvo-SMM" class="portfolio-work__link" target="_blank">
-               <img src="img/portfolio/work-4.jpg" alt="SMM неагенство" class="portfolio-work__img">
-            </a>
-            <div class="portfolio-work__overlay"></div>
-            <div class="portfolio-work__title portfolio-work__title--fourth">SMM неагенство</div>
-         </div>
-         <div class="portfolio-work animation-down">
-            <a href="https://www.behance.net/gallery/91269285/zhk-krylja" class="portfolio-work__link" target="_blank">
-               <img src="img/portfolio/work-5.jpg" alt="Жилой комплекс" class="portfolio-work__img">
-            </a>
-            <div class="portfolio-work__overlay"></div>
-            <div class="portfolio-work__title portfolio-work__title--fifth">Жилой комплекс</div>
-         </div>
-         <div class="portfolio-work animation-left">
-            <a href="https://bleckcleaning.ru/" class="portfolio-work__link" target="_blank">
-               <img src="img/portfolio/work-6.jpg" alt="клининг-центр" class="portfolio-work__img">
-            </a>
-            <div class="portfolio-work__overlay"></div>
-            <div class="portfolio-work__title portfolio-work__title--sixth">Клининг-центр</div>
-         </div>
-      </div>
-      <div class="portfolio__action">
-         <a href="https://www.behance.net/dmitriikaminsk" class="portfolio__btn">Смотреть еще</a>
-      </div>
-   </section>
+	<section class="section portfolio" id="portfolio">
+		<div class="section__top portfolio__top">
+			<div class="section__title portfolio__title">Портфолио
+				<span class="portfolio__square-big"></span>
+				<span class="portfolio__square-small"></span>
+			</div>
+		</div>
+		<div class="portfolio__works">
+			<div class="portfolio-work animation-up">
+				<a href="https://www.behance.net/gallery/84351865/FAT-MAN" class="portfolio-work__link" target="_blank">
+					<img src="img/portfolio/work-1.jpg" alt="Фитнес-центр" class="portfolio-work__img">
+				</a>
+				<div class="portfolio-work__overlay"></div>
+				<div class="portfolio-work__title portfolio-work__title--first">Фитнес-центр</div>
+			</div>
+			<div class="portfolio-work animation-right">
+				<a href="https://www.behance.net/gallery/85654211/gruppovoj-tur-v-dombaj" class="portfolio-work__link"
+					target="_blank">
+					<img src="img/portfolio/work-2.jpg" alt="Групповой тур" class="portfolio-work__img">
+				</a>
+				<div class="portfolio-work__overlay"></div>
+				<div class="portfolio-work__title portfolio-work__title--second">Групповой тур</div>
+			</div>
+			<div class="portfolio-work animation-right">
+				<a href="https://www.behance.net/gallery/94612179/dirizhabl-internet-supermarket"
+					class="portfolio-work__link" target="_blank">
+					<img src="img/portfolio/work-3.jpg" alt="Интернет-магазин" class="portfolio-work__img">
+				</a>
+				<div class="portfolio-work__overlay"></div>
+				<div class="portfolio-work__title portfolio-work__title--third">Интернет-магазин</div>
+			</div>
+			<div class="portfolio-work animation-left">
+				<a href="https://www.behance.net/gallery/87207043/ne-agenstvo-SMM" class="portfolio-work__link"
+					target="_blank">
+					<img src="img/portfolio/work-4.jpg" alt="SMM неагенство" class="portfolio-work__img">
+				</a>
+				<div class="portfolio-work__overlay"></div>
+				<div class="portfolio-work__title portfolio-work__title--fourth">SMM неагенство</div>
+			</div>
+			<div class="portfolio-work animation-down">
+				<a href="https://www.behance.net/gallery/91269285/zhk-krylja" class="portfolio-work__link" target="_blank">
+					<img src="img/portfolio/work-5.jpg" alt="Жилой комплекс" class="portfolio-work__img">
+				</a>
+				<div class="portfolio-work__overlay"></div>
+				<div class="portfolio-work__title portfolio-work__title--fifth">Жилой комплекс</div>
+			</div>
+			<div class="portfolio-work animation-left">
+				<a href="https://bleckcleaning.ru/" class="portfolio-work__link" target="_blank">
+					<img src="img/portfolio/work-6.jpg" alt="клининг-центр" class="portfolio-work__img">
+				</a>
+				<div class="portfolio-work__overlay"></div>
+				<div class="portfolio-work__title portfolio-work__title--sixth">Клининг-центр</div>
+			</div>
+		</div>
+		<div class="portfolio__action">
+			<a href="https://www.behance.net/dmitriikaminsk" class="portfolio__btn">Смотреть еще</a>
+		</div>
+	</section>
 
-   <section class="section services" id="services">
-      <div class="section__top services__top">
-         <div class="section__title services__title">Услуги
-            <span class="services__square-big"></span>
-            <span class="services__square-small"></span>
-         </div>
-      </div>
-      <div class="services-card">
-         <div class="services-card__item services-card__item--one">
-            <div class="services-card__title">Разработка landing page</div>
-            <div class="services-card__desc">
-               <div class="services-card__info">Сроки: от 7 дней</div>
-               <div class="services-card__info">Стоимость: от 25 тыс. ₽</div>
-            </div>
-            <button class="services-card__btn btn-red" id="callback-request">Подробнее</button>
-         </div>
-         <div class="services-card__item services-card__item--two">
-            <div class="services-card__title">Разработка многостраничного сайта</div>
-            <div class="services-card__desc">
-               <div class="services-card__info">Сроки: от 14 дней</div>
-               <div class="services-card__info">Стоимость: от 40 тыс. ₽</div>
-            </div>
-            <button class="services-card__btn btn-red" id="callback-request">Подробнее</button>
-         </div>
-         <div class="services-card__item services-card__item--three">
-            <div class="services-card__title">Разработка интернет-магазина</div>
-            <div class="services-card__desc">
-               <div class="services-card__info">Сроки: от 21 дня</div>
-               <div class="services-card__info">Стоимость: от 50 тыс. ₽</div>
-            </div>
-            <button class="services-card__btn btn-red" id="callback-request">Подробнее</button>
-         </div>
-      </div>
-   </section>
+	<section class="section services" id="services">
+		<div class="section__top services__top">
+			<div class="section__title services__title">Услуги
+				<span class="services__square-big"></span>
+				<span class="services__square-small"></span>
+			</div>
+		</div>
+		<div class="services-card">
+			<div class="services-card__item services-card__item--one">
+				<div class="services-card__title">Разработка landing page</div>
+				<div class="services-card__desc">
+					<div class="services-card__info">Сроки: от 7 дней</div>
+					<div class="services-card__info">Стоимость: от 25 тыс. ₽</div>
+				</div>
+				<button class="services-card__btn btn-red" id="callback-request">Подробнее</button>
+			</div>
+			<div class="services-card__item services-card__item--two">
+				<div class="services-card__title">Разработка многостраничного сайта</div>
+				<div class="services-card__desc">
+					<div class="services-card__info">Сроки: от 14 дней</div>
+					<div class="services-card__info">Стоимость: от 40 тыс. ₽</div>
+				</div>
+				<button class="services-card__btn btn-red" id="callback-request">Подробнее</button>
+			</div>
+			<div class="services-card__item services-card__item--three">
+				<div class="services-card__title">Разработка интернет-магазина</div>
+				<div class="services-card__desc">
+					<div class="services-card__info">Сроки: от 21 дня</div>
+					<div class="services-card__info">Стоимость: от 50 тыс. ₽</div>
+				</div>
+				<button class="services-card__btn btn-red" id="callback-request">Подробнее</button>
+			</div>
+		</div>
+	</section>
 
-   <footer class="section contacts" id="contacts">
-      <div class="section__top">
-         <div class="section__title contacts__title">Контакты</div>
-      </div>
-      <div class="contacts__row">
-         <div class="contacts__link-container">
-            <div class="contacts__link">
-               <svg class="contacts__icon contacts__icon--phone">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
-               </svg>
-               <a href="tel:+79094479154">+7(909)-447-91-54</a>
-            </div>
-            <div class="contacts__link">
-               <svg class="contacts__icon contacts__icon--mail">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
-               </svg>
-               <a href="mailto:kaminskii@yandex.ru">kaminskii@yandex.ru</a>
-            </div>
-            <div class="contacts__link">
-               <svg class="contacts__icon contacts__icon--inst">
-                  <use xlink:href="img/sprite.svg#icon-inst"></use>
-               </svg>
-               <a href="https://www.instagram.com/design_kaminski/" target="_blank">design_kaminski</a>
-            </div>
-            <div class="contacts__link">
-               <svg class="contacts__icon contacts__icon--behance">
-                  <use xlink:href="img/sprite.svg#icon-behance"></use>
-               </svg>
-               <a href="https://www.behance.net/dmitriikaminsk" target="_blank">dmitriikaminsk</a>
-            </div>
-         </div>
-         <div class="contacts__form">
-            <form action="" class="form-callback">
-               <div class="form-callback__title">Заявка на<br>обратный звонок</div>
-               <div class="form-callback__hint">Оставьте заявку на обратный звонок и мы перезвоним Вам в течени 15 минут
-               </div>
-               <div class="form-callback__input-wrapper">
-                  <input type="text" class="form-callback__input" id="name" name="user-name"
-                     placeholder="Ввeдите Ваше имя" required>
-                  <input type="tel" class="form-callback__input" id="phone" name="user-phone"
-                     placeholder="Ввeдите Ваш телефон" required>
-               </div>
-               <div class="form-callback__checkbox">
-                  <label>
-                     <input type="checkbox" name="privacy-policy" checked>
-                     <span></span>
-                     я согласен с обработкой персональных данных
-                  </label>
-               </div>
-               <button type="submit" class="form-callback__btn btn-red">Отправить</button>
-            </form>
-         </div>
-      </div>
-   </footer>
+	<footer class="section contacts" id="contacts">
+		<div class="section__top">
+			<div class="section__title contacts__title">Контакты</div>
+		</div>
+		<div class="contacts__row">
+			<div class="contacts__link-container">
+				<div class="contacts__link">
+					<div class="contacts__icon-container">
+						<svg class="contacts__icon contacts__icon--phone">
+							<use xlink:href="img/sprite.svg#icon-phone"></use>
+						</svg>
+					</div>
+					<a href="tel:+79094479154">+7(909)-447-91-54</a>
+				</div>
+				<div class="contacts__link">
+					<div class="contacts__icon-container">
+						<svg class="contacts__icon contacts__icon--mail">
+							<use xlink:href="img/sprite.svg#icon-mail"></use>
+						</svg>
+					</div>
+					<a href="mailto:kaminskii@yandex.ru">kaminskii@yandex.ru</a>
+				</div>
+				<div class="contacts__link">
+					<div class="contacts__icon-container">
+						<svg class="contacts__icon contacts__icon--inst">
+							<use xlink:href="img/sprite.svg#icon-inst"></use>
+						</svg>
+					</div>
+					<a href="https://www.instagram.com/design_kaminski/" target="_blank">design_kaminski</a>
+				</div>
+				<div class="contacts__link">
+					<div class="contacts__icon-container">
+						<svg class="contacts__icon contacts__icon--behance">
+							<use xlink:href="img/sprite.svg#icon-behance"></use>
+						</svg>
+					</div>
+					<a href="https://www.behance.net/dmitriikaminsk" target="_blank">dmitriikaminsk</a>
+				</div>
+			</div>
+			<div class="contacts__form">
+				<form action="" class="form-callback">
+					<div class="form-callback__title">Заявка на<br>обратный звонок</div>
+					<div class="form-callback__hint">Оставьте заявку на обратный звонок и мы перезвоним Вам в течени 15 минут
+					</div>
+					<div class="form-callback__input-wrapper">
+						<input type="text" class="form-callback__input" id="name" name="user-name"
+							placeholder="Ввeдите Ваше имя" required>
+						<input type="tel" class="form-callback__input" id="phone" name="user-phone"
+							placeholder="Ввeдите Ваш телефон" required>
+					</div>
+					<div class="form-callback__checkbox">
+						<label>
+							<input type="checkbox" name="privacy-policy" checked>
+							<span></span>
+							я согласен с обработкой персональных данных
+						</label>
+					</div>
+					<button type="submit" class="form-callback__btn btn-red">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</footer>
 
-   <!-- MODALS -->
-   <div class="popup popup-callback ">
-      <div class="popup__modal popup-callback__modal fadeIn">
-         <button class="popup__close"></button>
-         <form action="#" class="form-callback">
-            <div class="form-callback__title">Заявка на<br>обратный звонок</div>
-            <div class="form-callback__hint">Оставьте заявку на обратный звонок и мы перезвоним Вам в течени 15 минут
-            </div>
-            <div class="form-callback__input-wrapper">
-               <input type="text" class="popup-callback__input form-callback__input" id="name" name="user-name" placeholder="Ввeдите Ваше имя"
-                  required>
-               <input type="tel" class="popup-callback__input form-callback__input" id="phone" name="user-phone"
-                  placeholder="Ввeдите Ваш телефон" required>
-            </div>
-            <div class="popup-callback__checkbox form-callback__checkbox">
-               <label>
-                  <input type="checkbox" name="privacy-policy" checked>
-                  <span></span>
-                  я согласен с обработкой персональных данных
-               </label>
-            </div>
-            <button type="submit" class="popup-callback__btn form-callback__btn btn-red">Отправить</button>
-         </form>
-      </div>
-   </div>
-   <!-- ./popup-callback -->
+	<!-- MODALS -->
+	<div class="popup popup-callback ">
+		<div class="popup__modal popup-callback__modal fadeIn">
+			<button class="popup__close"></button>
+			<form action="#" class="form-callback">
+				<div class="form-callback__title">Заявка на<br>обратный звонок</div>
+				<div class="form-callback__hint">Оставьте заявку на обратный звонок и мы перезвоним Вам в течени 15 минут
+				</div>
+				<div class="form-callback__input-wrapper">
+					<input type="text" class="popup-callback__input form-callback__input" id="name" name="user-name"
+						placeholder="Ввeдите Ваше имя" required>
+					<input type="tel" class="popup-callback__input form-callback__input" id="phone" name="user-phone"
+						placeholder="Ввeдите Ваш телефон" required>
+				</div>
+				<div class="popup-callback__checkbox form-callback__checkbox">
+					<label>
+						<input type="checkbox" name="privacy-policy" checked>
+						<span></span>
+						я согласен с обработкой персональных данных
+					</label>
+				</div>
+				<button type="submit" class="popup-callback__btn form-callback__btn btn-red">Отправить</button>
+			</form>
+		</div>
+	</div>
+	<!-- ./popup-callback -->
 
-   <div class="popup popup-success">
-      <div class="popup__modal popup-success__modal fadeIn">
-         <button class="popup__close"></button>
-         <div class="popup__title">Ваша заявка  успешно отправлена</div>
-         <div class="popup__hint">Мы перезвоним Вам в течени 15 минут.<br>Спасибо, что выбираете качественный продукт</div>
-         <button class="popup__btn btn-red">Закрыть</button>
-      </div>
-   </div>
-   <!-- ./popup-success -->
+	<div class="popup popup-success">
+		<div class="popup__modal popup-success__modal fadeIn">
+			<button class="popup__close"></button>
+			<div class="popup__title">Ваша заявка успешно отправлена</div>
+			<div class="popup__hint">Мы перезвоним Вам в течени 15 минут.<br>Спасибо, что выбираете качественный продукт
+			</div>
+			<button class="popup__btn btn-red">Закрыть</button>
+		</div>
+	</div>
+	<!-- ./popup-success -->
 
 
-   <script src="js/script.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
