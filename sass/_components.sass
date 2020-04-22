@@ -6,17 +6,18 @@
 	font-family: Montserrat, sans-serif
 	font-size: 2rem
 	&__logo
-		padding: 23px 14px
+		padding: 21px 13px
 		font-family: "Miratrix", sans-serif
 		font-size: 2.15rem
 		text-align: center
 		color: #ffffff
 		background-color: #ed6663
-		margin-right: 5rem
+		margin-right: 2rem
 		@include center
 	&__menu
 		display: flex
 		align-items: center
+		flex-grow: 1
 		&-item
 			height: 100%
 			transition: all .3s
@@ -29,14 +30,21 @@
 				color: $purple
 			&:focus
 				color: #7c4a77
+
+			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+				padding: 0 15px
 	&__info
-		margin-left: 115px
+		margin-left: 4rem
 		display: flex
+		justify-content: flex-end
+		flex-grow: 1
 		&-item
 			white-space: nowrap
 			@include center
 			&:not(:last-child)
-				margin-right: 58px
+				margin-right: 5rem
+				@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+					margin-right: 4rem
 			&--btn
 				padding: 0 19px
 				max-height: 55px
@@ -89,6 +97,8 @@
 		margin-bottom: 38px
 		label
 			font-size: 1.4rem
+			position: relative
+			padding-left: 60px
 		input
 			position: absolute
 			display: none
@@ -107,7 +117,10 @@
 			border-radius: 6px
 			vertical-align: middle
 			transition: .1s .1s ease-in-out
-			position: relative
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
 			background: #fff
 			border: 1px solid #fff
 			box-sizing: border-box

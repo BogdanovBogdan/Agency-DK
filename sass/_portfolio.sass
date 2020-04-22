@@ -30,20 +30,23 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
-		margin-bottom: 70px
+		margin-bottom: 63px
 	&-work
-		flex: 0 1 30%
+		flex: 0 1 32%
 		position: relative
 		max-width: 359px
 		width: 100%
-		margin-bottom: 26px
 		overflow: hidden
 		position: relative
+		@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+			flex-basis: 31%
+		&:nth-child(n+4)
+			margin-top: 26px
+		&:not(:nth-child(3n+3))
+			margin-right: 3rem
 		img
 			height: 100%
 			object-fit: cover
-		&:not(:nth-child(3n+3))
-			margin-right: 3rem
 		&__overlay
 			position: absolute
 			top: 0
@@ -148,11 +151,13 @@
 		font-size: 2.4rem
 		text-transform: uppercase
 		color: #fff
-		padding: 31px 83px
+		padding: 23px 82px
 		border: 5px solid $purple
 		transition: all .3s
+		position: relative
+		background: url(../img/card-bg.jpg) center / cover no-repeat #1a242c
 		&:hover
-			background: $purple
+			background: $purple center / cover
 		
 .animation
 	&-up:hover

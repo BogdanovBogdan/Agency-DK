@@ -37,13 +37,15 @@
 		&__item
 			$borderSizeCard: 6px
 			display: flex
-			flex: 0 1 32%
+			flex: 0 1 31.5%
 			flex-wrap: wrap
 			flex-direction: column
 			align-items: center
 			justify-content: space-between
 			min-height: 452px
-			padding: 46px 20px 37px
+			padding: 37px 20px 34px
+			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+				padding: 37px 10px 34px
 			&:before
 				content: ''
 				position: absolute
@@ -81,21 +83,23 @@
 					height: 100%
 					width: 50%
 		&__title
+			min-height: 84px
 			font-size: 2.4rem
 			text-align: center
 			text-transform: uppercase
 			margin-bottom: 20px
 			z-index: 1
-			// mix-blend-mode: difference
+			mix-blend-mode: difference
+			line-height: 1.2
 		&__desc
 			font-size: 2.4rem
 			font-family: Montserrat, sans-serif
 			font-weight: 600
 			z-index: 1
-			// mix-blend-mode: difference
+			mix-blend-mode: difference
 		&__info
-			margin-bottom: 32px
 			text-align: center
+			margin-bottom: 32px
 		&__btn
 			color: #fff
 			padding: 23px 40px
