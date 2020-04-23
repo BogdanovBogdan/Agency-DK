@@ -16,6 +16,8 @@
 		top: -89px
 		right: -60px
 		border: solid 7px $purple
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			height: 970px
 	&__square-small
 		position: absolute
 		width: 697px
@@ -24,8 +26,12 @@
 		background: transparent
 		top: -18px
 		left: -49px
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			height: 120px
 	&__top
 		margin-bottom: 88px
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			margin-bottom: 65px
 	&__works
 		display: flex
 		flex-wrap: wrap
@@ -38,7 +44,7 @@
 		width: 100%
 		overflow: hidden
 		position: relative
-		@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-lg-max)
 			flex-basis: 31%
 		&:nth-child(n+4)
 			margin-top: 26px
@@ -58,19 +64,22 @@
 			z-index: 2
 			transition: all 0.7s ease-in-out
 		&__title
+			$font-size: 3rem
 			position: absolute
 			z-index: 3
 			font-family: "Miratrix", sans-serif
-			font-size: 3rem
+			font-size: $font-size
 			text-transform: uppercase
 			color: #ffffff
 			transition: all 0.7s ease-in-out
+			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+				font-size: 2.6rem
 			&--first
 				top: 0
 				left: 50%
 				transform: translateX(-50%)
 				word-wrap: break-word
-				width: 26px // calc !!!!!!!!!
+				width: calc(#{$font-size} - 4px)
 				text-align: center
 				&::before
 					content: ''
@@ -122,7 +131,7 @@
 				top: auto
 				bottom: 1%
 				word-wrap: break-word
-				width: 26px // calc !!!!!!!!!
+				width: calc(#{$font-size} - 4px)
 				text-align: center
 				&::before
 					content: ''
@@ -156,6 +165,8 @@
 		transition: all .3s
 		position: relative
 		background: url(../img/card-bg.jpg) center / cover no-repeat #1a242c
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			padding: 18px 35px
 		&:hover
 			background: $purple center / cover
 		

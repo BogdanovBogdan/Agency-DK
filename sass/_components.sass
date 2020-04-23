@@ -41,8 +41,11 @@
 		&-item
 			white-space: nowrap
 			@include center
-			&:not(:last-child)
+			&:first-child 
 				margin-right: 5rem
+				transition: all .3s
+				&:hover
+					color: $purple
 				@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
 					margin-right: 4rem
 			&--btn
@@ -69,6 +72,8 @@
 		font-size: 1.7rem
 		text-align: center
 		margin-bottom: 33px
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			line-height: 1.4
 	&__input
 		padding: 29px 32px
 		border: solid 1px #ffffff
@@ -111,11 +116,9 @@
 					transform: translate(18px, -50%)
 		span
 			display: inline-block
-			margin-right: 25px
 			width: 40px
 			height: 20px
 			border-radius: 6px
-			vertical-align: middle
 			transition: .1s .1s ease-in-out
 			position: absolute
 			left: 0
@@ -123,7 +126,6 @@
 			transform: translateY(-50%)
 			background: #fff
 			border: 1px solid #fff
-			box-sizing: border-box
 			&:after
 				content: " "
 				position: absolute

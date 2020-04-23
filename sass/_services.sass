@@ -18,6 +18,8 @@
 		top: -36px
 		left: -153px
 		border: solid 7px $purple
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			height: 930px
 	&__square-small
 		position: absolute
 		width: 632px
@@ -31,9 +33,12 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
 		position: relative
 		color: #fff
 		// color: #1b262f
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			justify-content: space-evenly
 		&__item
 			$borderSizeCard: 6px
 			display: flex
@@ -56,26 +61,34 @@
 				border: solid 6px $white
 				position: relative
 				background: url('../img/card-bg.jpg') top center no-repeat #17292b
+				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+					flex: 0 1 45%
+					margin-right: 3rem
 				&:before
 					bottom: 2 - $borderSizeCard
 					left: 50%
 					transform: translateX(-50%)
-					height: 50%
+					height: 48%
 					width: 100%
 			&--two
 				border: solid 6px $purple
 				position: relative
 				background: url('../img/card-bg.jpg') bottom center no-repeat #17292b
+				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+					flex: 0 1 45%
 				&:before
 					top: 0 - $borderSizeCard
 					left: 50%
 					transform: translateX(-50%)
-					height: 50%
+					height: 48%
 					width: 100%
 			&--three
 				border: solid 6px $red
 				position: relative
 				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #17292b
+				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+					flex-basis: 48%
+					margin-top: 3rem
 				&:before
 					bottom: 50%
 					right: 0 - $borderSizeCard
