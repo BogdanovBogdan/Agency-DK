@@ -1,12 +1,13 @@
 .contacts 
 	font-family: "Montserrat", sans-serif
-	padding-top: 135px
+	@media screen and (min-width:$screen-lg-min)
+		padding-top: 135px
 	@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 		padding-top: 100px
 	&__title
-		margin-bottom: 124px
+		margin-bottom: 12.4rem
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-			margin-bottom: 100px
+			margin-bottom: 10rem
 		&:before
 			content: ''
 			position: absolute
@@ -19,6 +20,8 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			flex-direction: column
 	&__link-container
 		flex: 0 1 50%
 		display: flex
@@ -34,8 +37,11 @@
 		align-items: center
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			font-size: 2.5rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			&:not(:last-child)
+				margin-bottom: 4rem
 		&:not(:last-child)
-			margin-bottom: 72px
+			margin-bottom: 7.2rem
 		&:hover svg
 			transition: all .3s
 			fill: $purple
@@ -51,33 +57,33 @@
 	&__icon
 		fill: #fff
 		&-container
-			margin-right: 47px
+			margin-right: 4.7rem
 			min-width: 40px
 			display: flex
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-				margin-right: 30px
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
+				margin-right: 3rem
 		&--phone
 			width: 31px
 			height: 31px
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 				height: 26px
 				width: 26px
 		&--mail
 			width: 37px
 			height: 37px
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 				height: 32px
 				width: 32px
 		&--inst
 			width: 34px
 			height: 34px
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 				height: 29px
 				width: 29px
 		&--behance
 			width: 40px
 			height: 40px
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 				height: 35px
 				width: 35px
 	&__form
@@ -88,6 +94,9 @@
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			flex: 0 1 55%
 			padding: 40px 25px
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			margin-top: 10rem
+			max-width: 400px
 		
 
 	

@@ -26,17 +26,19 @@
 		background: transparent
 		top: -18px
 		left: -49px
-		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 			height: 120px
 	&__top
-		margin-bottom: 88px
+		margin-bottom: 8.8rem
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-			margin-bottom: 65px
+			margin-bottom: 6.5rem
 	&__works
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
-		margin-bottom: 63px
+		margin-bottom: 6.3rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			justify-content: space-evenly
 	&-work
 		flex: 0 1 32%
 		position: relative
@@ -46,10 +48,15 @@
 		position: relative
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-lg-max)
 			flex-basis: 31%
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			flex-basis: 45%
+		@media screen and (min-width:$screen-md-min)
+			&:not(:nth-child(3n+3))
+				margin-right: 3rem
+		&:nth-child(odd)
+			margin-right: 2rem
 		&:nth-child(n+4)
-			margin-top: 26px
-		&:not(:nth-child(3n+3))
-			margin-right: 3rem
+			margin-top: 2.6rem
 		img
 			height: 100%
 			object-fit: cover
@@ -167,6 +174,9 @@
 		background: url(../img/card-bg.jpg) center / cover no-repeat #1a242c
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			padding: 18px 35px
+		@media screen and (max-width:$screen-sm-max)
+			background: transparent
+
 		&:hover
 			background: $purple center / cover
 		

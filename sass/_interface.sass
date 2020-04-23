@@ -9,12 +9,14 @@ html
 		font-size: 9px
 	@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 		font-size: 8px
+	@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+		font-size: 6px
 
 body
 	font-family: 'Intro', sans-serif
 	font-size: 1.6rem
 	overflow-x: hidden
-	background: url("../img/background.jpg") center no-repeat
+	background: url("../img/background.jpg") center no-repeat #19272c
 	background-size: cover
 	line-height: 1
 
@@ -58,7 +60,7 @@ h1, h2, h3, h4
 
 .section
 	padding: 100px 0
-	@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+	@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 		padding: 70px 0
 	&__top
 		position: relative
@@ -78,19 +80,19 @@ h1, h2, h3, h4
 		color: #fff
 	
 // creating adaptability with the calc() property
-@media screen and (min-width: 448px) and (max-width: 574px)
+@media screen and (min-width: 448px) and (max-width: 575px)
 	header, section, footer
 		padding-left: calc(50% - 209px) !important
 		padding-right: calc(50% - 209px) !important
 
 
-@media screen and (min-width: 575px) and (max-width: 766px)
+@media screen and (min-width: 576px) and (max-width: 767px)
 	header, section, footer
 		padding-left: calc(50% - 272.5px) !important
 		padding-right: calc(50% - 272.5px) !important
 
 
-@media screen and (min-width: 767px) and (max-width: 991px)
+@media screen and (min-width: 768px) and (max-width: 991px)
 	header, section, footer
 		padding-left: calc(50% - 368.5px) !important
 		padding-right: calc(50% - 368.5px) !important

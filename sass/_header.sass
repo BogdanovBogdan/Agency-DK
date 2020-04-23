@@ -22,6 +22,8 @@
 				font-size: 7.5rem
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 				font-size: 6.2rem
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+				font-size: 5.6rem
 			&::before
 				content: 'Креативное агенство'
 				position: absolute
@@ -37,7 +39,7 @@
 			font-weight: normal
 			text-align: center
 			margin-bottom: 8.4rem
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 				font-size: 4.8rem
 		&__btn
 			max-width: 440px
@@ -55,6 +57,11 @@
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 				max-width: 350px
 				padding: 30px
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+				max-width: 230px
+				padding: 20px
+				font-size: 2.5rem
+				margin-bottom: 10rem
 		&__social
 			display: flex
 			justify-content: space-between
@@ -63,6 +70,8 @@
 			position: relative
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-lg-max)
 				width: 90%
+			@media screen and (max-width:$screen-sm-max)
+				display: none
 			&:after
 				content: ''
 				position: absolute

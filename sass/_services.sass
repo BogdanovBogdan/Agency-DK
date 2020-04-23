@@ -1,6 +1,6 @@
 .services
 	&__top
-		margin-bottom: 65px
+		margin-bottom: 6.5rem
 	&__title
 		&:before
 			content: ''
@@ -28,6 +28,8 @@
 		background: transparent
 		top: -10px
 		right: -48px
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			height: 92px
 
 	&-card
 		display: flex
@@ -37,7 +39,7 @@
 		position: relative
 		color: #fff
 		// color: #1b262f
-		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 			justify-content: space-evenly
 		&__item
 			$borderSizeCard: 6px
@@ -49,8 +51,11 @@
 			justify-content: space-between
 			min-height: 452px
 			padding: 37px 20px 34px
-			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-lg-max)
 				padding: 37px 10px 34px
+				min-height: 400px
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+				min-height: 350px
 			&:before
 				content: ''
 				position: absolute
@@ -61,7 +66,7 @@
 				border: solid 6px $white
 				position: relative
 				background: url('../img/card-bg.jpg') top center no-repeat #17292b
-				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex: 0 1 45%
 					margin-right: 3rem
 				&:before
@@ -74,7 +79,7 @@
 				border: solid 6px $purple
 				position: relative
 				background: url('../img/card-bg.jpg') bottom center no-repeat #17292b
-				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex: 0 1 45%
 				&:before
 					top: 0 - $borderSizeCard
@@ -86,7 +91,7 @@
 				border: solid 6px $red
 				position: relative
 				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #17292b
-				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex-basis: 48%
 					margin-top: 3rem
 				&:before
@@ -100,7 +105,7 @@
 			font-size: 2.4rem
 			text-align: center
 			text-transform: uppercase
-			margin-bottom: 20px
+			margin-bottom: 2rem
 			z-index: 1
 			mix-blend-mode: difference
 			line-height: 1.2
@@ -112,7 +117,7 @@
 			mix-blend-mode: difference
 		&__info
 			text-align: center
-			margin-bottom: 32px
+			margin-bottom: 3.2rem
 		&__btn
 			color: #fff
 			padding: 23px 40px

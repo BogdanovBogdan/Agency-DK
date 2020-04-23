@@ -67,13 +67,17 @@
 		font-size: 3rem
 		font-weight: bold
 		text-align: center
-		margin-bottom: 29px
+		margin-bottom: 2.9rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			font-size: 4rem
 	&__hint
 		font-size: 1.7rem
 		text-align: center
-		margin-bottom: 33px
-		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+		margin-bottom: 3.3rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 			line-height: 1.4
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			font-size: 2rem
 	&__input
 		padding: 29px 32px
 		border: solid 1px #ffffff
@@ -85,6 +89,9 @@
 		line-height: 1.2
 		text-align: left
 		transition: all .3s ease-out
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			padding: 24px
+			font-size: 2rem
 		&:hover
 			background-color: rgba(199, 58, 184, 0.051)
 		&:focus
@@ -92,18 +99,21 @@
 		&::placeholder
 			color: #fff
 		&:not(:last-of-type) 
-			margin-bottom: 20px
+			margin-bottom: 2rem
 		&-wrapper
-			margin-bottom: 38px
+			margin-bottom: 3.8rem
 	&__checkbox 
 		display: flex
 		align-items: center
 		justify-content: left
-		margin-bottom: 38px
+		margin-bottom: 3.8rem
 		label
 			font-size: 1.4rem
 			position: relative
 			padding-left: 60px
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+				font-size: 1.8rem
+				line-height: 1.3
 		input
 			position: absolute
 			display: none
@@ -148,6 +158,8 @@
 		font-size: 2rem
 		width: 100%
 		height: 71px
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			height: 51px
 	
 .btn-red
 	background-color: $red
