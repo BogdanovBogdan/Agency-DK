@@ -70,16 +70,18 @@
 		margin-bottom: 2.9rem
 		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
 			font-size: 4rem
+		@media screen and (max-width:$screen-xs-min - 1) 
+			font-size: 2.5rem
 	&__hint
 		font-size: 1.7rem
 		text-align: center
 		margin-bottom: 3.3rem
-		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
+		@media screen and (max-width:$screen-md-max)
 			line-height: 1.4
 		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
 			font-size: 2rem
 	&__input
-		padding: 29px 32px
+		padding: 15px 20px
 		border: solid 1px #ffffff
 		color: #fff
 		background-color: transparent
@@ -113,6 +115,7 @@
 			padding-left: 60px
 			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
 				font-size: 1.8rem
+			@media screen and (max-width:$screen-sm-max)
 				line-height: 1.3
 		input
 			position: absolute
@@ -160,6 +163,8 @@
 		height: 71px
 		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
 			height: 51px
+		@media screen and (max-width:$screen-xs-min - 1) 
+			height: 40px
 	
 .btn-red
 	background-color: $red

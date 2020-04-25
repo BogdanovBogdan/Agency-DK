@@ -4,12 +4,11 @@
 html
 	font-size: 10px
 	overflow-x: hidden
-
 	@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
 		font-size: 9px
 	@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 		font-size: 8px
-	@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+	@media screen and (max-width:$screen-sm-max)
 		font-size: 6px
 
 body
@@ -60,8 +59,10 @@ h1, h2, h3, h4
 
 .section
 	padding: 100px 0
-	@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
+	@media screen and (min-width:$screen-xs-min) and (max-width:$screen-md-max)
 		padding: 70px 0
+	@media screen and (max-width:$screen-xs-min - 1) 
+		padding: 50px 0
 	&__top
 		position: relative
 		display: flex
@@ -71,6 +72,8 @@ h1, h2, h3, h4
 		color: #ffffff
 		font-size: 6rem
 		font-family: "Miratrix", sans-serif
+		@media screen and (max-width:$screen-xs-max) 
+			font-size: 4rem
 	&__btn 
 		background: #1b262f
 		width: 359px
@@ -80,29 +83,30 @@ h1, h2, h3, h4
 		color: #fff
 	
 // creating adaptability with the calc() property
+@media screen and (max-width: 447px)
+	header, section, footer
+		padding-left: 15px !important
+		padding-right: 15px !important
+
 @media screen and (min-width: 448px) and (max-width: 575px)
 	header, section, footer
 		padding-left: calc(50% - 209px) !important
 		padding-right: calc(50% - 209px) !important
-
 
 @media screen and (min-width: 576px) and (max-width: 767px)
 	header, section, footer
 		padding-left: calc(50% - 272.5px) !important
 		padding-right: calc(50% - 272.5px) !important
 
-
 @media screen and (min-width: 768px) and (max-width: 991px)
 	header, section, footer
 		padding-left: calc(50% - 368.5px) !important
 		padding-right: calc(50% - 368.5px) !important
 
-
 @media screen and (min-width: 992px) and (max-width: 1169px)
 	header, section, footer
 		padding-left: calc(50% - 480.5px) !important
 		padding-right: calc(50% - 480.5px) !important
-
 
 @media screen and (min-width: 1170px)
 	header, section, footer

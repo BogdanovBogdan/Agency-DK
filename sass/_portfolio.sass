@@ -4,9 +4,9 @@
 			content: ''
 			position: absolute
 			width: 753px
-			height: 5px
+			height: .5rem
 			background: $red
-			bottom: -17px
+			bottom: -1.7rem
 			left: 0
 	&__square-big
 		position: absolute
@@ -15,19 +15,24 @@
 		height: 1174px
 		top: -89px
 		right: -60px
-		border: solid 7px $purple
-		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+		border: solid .7REM $purple
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-md-max)
 			height: 970px
+		@media screen and (max-width:$screen-xs-min - 1) 
+			top: -60px
+			height: 640px
 	&__square-small
 		position: absolute
-		width: 697px
-		height: 148px
-		border: solid 7px #ffffff
+		width: 69.7rem
+		height: 14.8rem
+		border: solid .7rem #ffffff
 		background: transparent
 		top: -18px
 		left: -49px
-		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
-			height: 120px
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			height: 13rem
+		@media screen and (max-width:$screen-xs-min - 1) 
+			height: 12rem
 	&__top
 		margin-bottom: 8.8rem
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
@@ -48,13 +53,15 @@
 		position: relative
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-lg-max)
 			flex-basis: 31%
-		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+		@media screen and (max-width:$screen-sm-max)
 			flex-basis: 45%
+			&:nth-child(odd)
+				margin-right: 2rem
+			&:nth-child(n+3)
+				margin-top: 2.6rem
 		@media screen and (min-width:$screen-md-min)
 			&:not(:nth-child(3n+3))
 				margin-right: 3rem
-		&:nth-child(odd)
-			margin-right: 2rem
 		&:nth-child(n+4)
 			margin-top: 2.6rem
 		img
@@ -71,31 +78,36 @@
 			z-index: 2
 			transition: all 0.7s ease-in-out
 		&__title
-			$font-size: 3rem
 			position: absolute
 			z-index: 3
 			font-family: "Miratrix", sans-serif
-			font-size: $font-size
+			font-size: 3rem
 			text-transform: uppercase
 			color: #ffffff
 			transition: all 0.7s ease-in-out
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 				font-size: 2.6rem
+			@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+				font-size: 2.9rem
+			@media screen and (max-width:$screen-xs-min - 1) 
+				font-size: 2rem
 			&--first
 				top: 0
 				left: 50%
 				transform: translateX(-50%)
 				word-wrap: break-word
-				width: calc(#{$font-size} - 4px)
+				width: 2.8rem
 				text-align: center
+				@media screen and (max-width:$screen-xs-min - 1)
+					width: 1.8rem
 				&::before
 					content: ''
 					position: absolute
 					background: $red
-					width: 5px
+					width: .5rem
 					height: 100%
 					top: 0
-					left: -8px
+					left: -.8rem
 			&--second
 				top: auto
 				left: auto
@@ -105,9 +117,9 @@
 					content: ''
 					position: absolute
 					background: $purple
-					height: 5px
+					height: .5rem
 					width: 100%
-					top: -4px
+					top: -.4rem
 					left: 0
 			&--third
 				top: 21%
@@ -117,9 +129,9 @@
 					content: ''
 					position: absolute
 					background: #898989
-					height: 5px
+					height: .5rem
 					width: 100%
-					bottom: -13px
+					bottom: -1.3rem
 					left: 0
 			&--fourth
 				left: 1%
@@ -128,9 +140,9 @@
 					content: ''
 					position: absolute
 					background: #898989
-					height: 5px
+					height: .5rem
 					width: 100%
-					bottom: -8px
+					bottom: -.8rem
 					left: 0
 			&--fifth
 				left: 50%
@@ -138,16 +150,18 @@
 				top: auto
 				bottom: 1%
 				word-wrap: break-word
-				width: calc(#{$font-size} - 4px)
+				width: 2.8rem
 				text-align: center
+				@media screen and (max-width:$screen-xs-min - 1)
+					width: 1.8rem
 				&::before
 					content: ''
 					position: absolute
 					background: $red
-					width: 5px
+					width: .5rem
 					height: 100%
 					top: 0
-					right: -10px
+					right: -1rem
 			&--sixth
 				left: 1%
 				top: 22%
@@ -155,9 +169,9 @@
 					content: ''
 					position: absolute
 					background: $purple
-					height: 5px
+					height: .5rem
 					width: 100%
-					top: -9px
+					top: -.9rem
 					left: 0
 	&__action
 		display: flex
@@ -168,7 +182,7 @@
 		text-transform: uppercase
 		color: #fff
 		padding: 23px 82px
-		border: 5px solid $purple
+		border: .5rem solid $purple
 		transition: all .3s
 		position: relative
 		background: url(../img/card-bg.jpg) center / cover no-repeat #1a242c
@@ -176,7 +190,11 @@
 			padding: 18px 35px
 		@media screen and (max-width:$screen-sm-max)
 			background: transparent
-
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+			padding: 16px 40px
+		@media screen and (max-width:$screen-xs-min - 1) 
+			padding: 10px 40px
+			font-size: 2rem
 		&:hover
 			background: $purple center / cover
 		

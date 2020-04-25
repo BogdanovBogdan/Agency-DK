@@ -6,9 +6,9 @@
 			content: ''
 			position: absolute
 			width: 880px
-			height: 5px
+			height: .5rem
 			background: $red
-			bottom: -7px
+			bottom: -1.7rem
 			left: 0
 	&__square-big
 		position: absolute
@@ -17,20 +17,22 @@
 		height: 649px
 		top: -36px
 		left: -153px
-		border: solid 7px $purple
+		border: solid .7rem $purple
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			height: 930px
+		@media screen and (max-width:$screen-xs-min - 1) 
+			width: 250px
+			height: 850px
 	&__square-small
 		position: absolute
-		width: 632px
-		height: 162px
-		border: solid 7px #ffffff
+		width: 63.2rem
+		height: 16.2rem
+		border: solid .7rem #ffffff
 		background: transparent
 		top: -10px
 		right: -48px
-		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
-			height: 92px
-
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+			right: -60px
 	&-card
 		display: flex
 		justify-content: space-between
@@ -39,10 +41,11 @@
 		position: relative
 		color: #fff
 		// color: #1b262f
-		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
+		@media screen and (max-width:$screen-md-max)
 			justify-content: space-evenly
+		@media screen and (max-width:$screen-xs-max)
+			flex-direction: column
 		&__item
-			$borderSizeCard: 6px
 			display: flex
 			flex: 0 1 31.5%
 			flex-wrap: wrap
@@ -51,44 +54,58 @@
 			justify-content: space-between
 			min-height: 452px
 			padding: 37px 20px 34px
+			border: solid .6rem
 			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-lg-max)
-				padding: 37px 10px 34px
+				padding: 30px 20px
 				min-height: 400px
 			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
 				min-height: 350px
+				padding: 20px 15px
+			@media screen and (max-width:$screen-xs-max)
+				min-height: 320px
+				max-width: 260px
+				width: 100%
+				padding: 15px 10px
+				&:not(:last-child) 
+					margin-bottom: 4rem
+			@media screen and (max-width:$screen-xs-min - 1)
+				max-width: 210px
+				min-height: 280px
 			&:before
 				content: ''
 				position: absolute
 				background: $white
-				border: $borderSizeCard solid $white
+				border: .6rem solid $white 
 				box-sizing: content-box
 			&--one
-				border: solid 6px $white
+				border-color: $white
 				position: relative
 				background: url('../img/card-bg.jpg') top center no-repeat #17292b
 				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex: 0 1 45%
 					margin-right: 3rem
 				&:before
-					bottom: 2 - $borderSizeCard
+					bottom: 0 - .6rem
 					left: 50%
 					transform: translateX(-50%)
 					height: 48%
 					width: 100%
 			&--two
-				border: solid 6px $purple
+				border-color: $purple
 				position: relative
 				background: url('../img/card-bg.jpg') bottom center no-repeat #17292b
 				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex: 0 1 45%
+				@media screen and (max-width:$screen-xs-min - 1) 
+					border-width: .6rem
 				&:before
-					top: 0 - $borderSizeCard
+					top: 0 - .6rem
 					left: 50%
 					transform: translateX(-50%)
 					height: 48%
 					width: 100%
 			&--three
-				border: solid 6px $red
+				border-color: $red
 				position: relative
 				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #17292b
 				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
@@ -96,7 +113,7 @@
 					margin-top: 3rem
 				&:before
 					bottom: 50%
-					right: 0 - $borderSizeCard
+					right: 0 - .6rem
 					transform: translateY(50%)
 					height: 100%
 					width: 50%
@@ -109,15 +126,27 @@
 			z-index: 1
 			mix-blend-mode: difference
 			line-height: 1.2
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+				min-height: 60px
+			@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+				min-height: 57px
+			@media screen and (max-width:$screen-xs-min - 1) 
+				min-height: 55px
+				font-size: 2.5rem
+				margin-bottom: 0.5rem
 		&__desc
 			font-size: 2.4rem
 			font-family: Montserrat, sans-serif
 			font-weight: 600
 			z-index: 1
 			mix-blend-mode: difference
+			@media screen and (max-width:$screen-xs-min - 1) 
+				margin-bottom: 1.5rem
 		&__info
 			text-align: center
 			margin-bottom: 3.2rem
+			@media screen and (max-width:$screen-xs-min - 1) 
+				font-size: 2.33rem
 		&__btn
 			color: #fff
 			padding: 23px 40px
@@ -128,6 +157,11 @@
 			font-size: 2.4rem
 			font-weight: 500
 			z-index: 1
+			@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+				padding: 18px 40px
+			@media screen and (max-width:$screen-xs-min - 1) 
+				padding: 12px 40px
+				font-size: 2rem
 
 
 
