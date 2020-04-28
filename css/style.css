@@ -62,7 +62,7 @@ html {
       font-size: 8px; } }
   @media screen and (max-width: 767px) {
     html {
-      font-size: 6px; } }
+      font-size: 7px; } }
 
 body {
   font-family: 'Intro', sans-serif;
@@ -183,7 +183,7 @@ h1, h2, h3, h4 {
         font-size: 4rem; } }
     @media screen and (max-width: 467px) {
       .form-callback__title {
-        font-size: 2.5rem; } }
+        font-size: 3rem; } }
   .form-callback__hint {
     font-size: 1.7rem;
     text-align: center;
@@ -207,7 +207,7 @@ h1, h2, h3, h4 {
     -webkit-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out; }
-    @media screen and (min-width: 576px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
       .form-callback__input {
         padding: 24px;
         font-size: 2rem; } }
@@ -244,11 +244,9 @@ h1, h2, h3, h4 {
       font-size: 1.4rem;
       position: relative;
       padding-left: 60px; }
-      @media screen and (min-width: 576px) and (max-width: 767px) {
-        .form-callback__checkbox label {
-          font-size: 1.8rem; } }
       @media screen and (max-width: 767px) {
         .form-callback__checkbox label {
+          font-size: 1.8rem;
           line-height: 1.3; } }
     .form-callback__checkbox input {
       position: absolute;
@@ -304,13 +302,13 @@ h1, h2, h3, h4 {
     font-weight: bold;
     font-size: 2rem;
     width: 100%;
-    height: 71px; }
-    @media screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 26px 0; }
+    @media screen and (min-width: 468px) and (max-width: 575px) {
       .form-callback__btn {
-        height: 51px; } }
+        padding: 18px 0; } }
     @media screen and (max-width: 467px) {
       .form-callback__btn {
-        height: 40px; } }
+        padding: 16px 0; } }
 
 .btn-red {
   background-color: #ed6663;
@@ -664,7 +662,7 @@ h1, h2, h3, h4 {
           font-size: 4.8rem; } }
       @media screen and (max-width: 467px) {
         .header-main__title {
-          font-size: 3.65rem;
+          font-size: 3.35rem;
           letter-spacing: 1px; } }
       .header-main__title::before {
         content: 'Креативное агенство';
@@ -692,8 +690,7 @@ h1, h2, h3, h4 {
           margin-bottom: 5rem; } }
       @media screen and (max-width: 467px) {
         .header-main__subtitle {
-          font-size: 2.66rem;
-          margin-bottom: 4rem; } }
+          font-size: 2.71rem; } }
     .header-main__btn {
       max-width: 440px;
       width: 100%;
@@ -721,7 +718,7 @@ h1, h2, h3, h4 {
       @media screen and (max-width: 467px) {
         .header-main__btn {
           max-width: 170px;
-          padding: 12px;
+          padding: 16px;
           font-size: 2rem;
           margin-bottom: 0; } }
     .header-main__social {
@@ -924,7 +921,7 @@ h1, h2, h3, h4 {
         font-size: 2.9rem; } }
     @media screen and (max-width: 467px) {
       .portfolio-work__title {
-        font-size: 2rem; } }
+        font-size: 1.9rem; } }
     .portfolio-work__title--first {
       top: 0;
       left: 50%;
@@ -956,7 +953,7 @@ h1, h2, h3, h4 {
         background: #c73ab8;
         height: .5rem;
         width: 100%;
-        top: -.4rem;
+        top: -.8rem;
         left: 0; }
     .portfolio-work__title--third {
       top: 21%;
@@ -968,7 +965,7 @@ h1, h2, h3, h4 {
         background: #898989;
         height: .5rem;
         width: 100%;
-        bottom: -1.3rem;
+        bottom: -.8rem;
         left: 0; }
     .portfolio-work__title--fourth {
       left: 1%;
@@ -1001,7 +998,7 @@ h1, h2, h3, h4 {
         width: .5rem;
         height: 100%;
         top: 0;
-        right: -1rem; }
+        right: -.8rem; }
     .portfolio-work__title--sixth {
       left: 1%;
       top: 22%; }
@@ -1011,7 +1008,7 @@ h1, h2, h3, h4 {
         background: #c73ab8;
         height: .5rem;
         width: 100%;
-        top: -.9rem;
+        top: -.8rem;
         left: 0; }
 
 .portfolio__action {
@@ -1047,7 +1044,7 @@ h1, h2, h3, h4 {
       padding: 16px 40px; } }
   @media screen and (max-width: 467px) {
     .portfolio__btn {
-      padding: 10px 40px;
+      padding: 16px 40px;
       font-size: 2rem; } }
   .portfolio__btn:hover {
     background: #c73ab8 center/cover; }
@@ -1173,16 +1170,12 @@ h1, h2, h3, h4 {
         padding: 20px 15px; } }
     @media screen and (max-width: 575px) {
       .services-card__item {
+        max-width: 240px;
         min-height: 320px;
-        max-width: 260px;
         width: 100%;
         padding: 15px 10px; }
         .services-card__item:not(:last-child) {
           margin-bottom: 4rem; } }
-    @media screen and (max-width: 467px) {
-      .services-card__item {
-        max-width: 210px;
-        min-height: 280px; } }
     .services-card__item:before {
       content: '';
       position: absolute;
@@ -1271,9 +1264,9 @@ h1, h2, h3, h4 {
     font-weight: 600;
     z-index: 1;
     mix-blend-mode: difference; }
-    @media screen and (max-width: 467px) {
+    @media screen and (max-width: 575px) {
       .services-card__desc {
-        margin-bottom: 1.5rem; } }
+        margin-top: 22px; } }
   .services-card__info {
     text-align: center;
     margin-bottom: 3.2rem; }
@@ -1295,7 +1288,7 @@ h1, h2, h3, h4 {
         padding: 18px 40px; } }
     @media screen and (max-width: 467px) {
       .services-card__btn {
-        padding: 12px 40px;
+        padding: 16px 40px;
         font-size: 2rem; } }
 
 .contacts {
@@ -1371,7 +1364,7 @@ h1, h2, h3, h4 {
         font-size: 2.5rem; } }
     @media screen and (max-width: 767px) {
       .contacts__link {
-        font-size: 2.5rem; }
+        font-size: 3rem; }
         .contacts__link:not(:last-child) {
           margin-bottom: 5rem; } }
     .contacts__link:hover svg {
@@ -1468,7 +1461,7 @@ h1, h2, h3, h4 {
       .contacts__form {
         margin-top: 10rem;
         padding: 30px 25px;
-        max-width: 270px; } }
+        max-width: 340px; } }
 
 .popup {
   position: fixed;
