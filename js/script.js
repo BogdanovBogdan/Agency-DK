@@ -2,7 +2,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	"use strict";
 
 	// smooth scrolling to anchors
-	const anchors = document.querySelectorAll('a[href*="#"]')
+	const anchors = document.querySelectorAll('a[href*="#"]'),
+		nav = document.querySelector(".nav-container");
 
 	for (let anchor of anchors) {
 		anchor.addEventListener('click', function (e) {
@@ -10,12 +11,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			const blockID = anchor.getAttribute('href').replace('#', '');
 
-			document.getElementById(blockID).scrollIntoView({
-				behavior: 'smooth',
-				block: 'start',
-			})
-		})
-	}
+			if (nav.classList.contains("animated")) {
+				const trigger = nav.querySelector(".trigger");
+				trigger.click()
+				setTimeout(() => {
+					document.getElementById(blockID).scrollIntoView({
+						behavior: 'smooth',
+						block: 'start',
+					})
+				}, 500);
+			} else {
+				document.getElementById(blockID).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+				});
+			}
+		});
+	};
 
 
 	const calcScroll = () => {
@@ -27,10 +39,10 @@ window.addEventListener("DOMContentLoaded", () => {
 		document.body.appendChild(calcBox);
 		let scrollWidth = calcBox.offsetWidth - calcBox.clientWidth;
 		calcBox.remove();
-		
+
 		return scrollWidth;
 	};
-	
+
 
 	const bindModals = (triggerSelectors, modalSelector, closeSelector) => {
 		const triggers = document.querySelectorAll(triggerSelectors),
@@ -67,5 +79,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-	
+	// animation burger menu
+	const triggerMenu = document.querySelector('.trigger'),
+		navigation = document.querySelector('.nav-container');
+
+	triggerMenu.addEventListener("click", () => {
+		navigation.classList.toggle('animated');
+		document.querySelector("html").style.overflow == "hidden" ? document.querySelector("html").style.overflow = "" : document.querySelector("html").style.overflow = "hidden";
+	});
+
+
 });
