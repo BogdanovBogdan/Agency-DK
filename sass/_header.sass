@@ -4,150 +4,150 @@
 		padding: 30px 0 100px
 	@media screen and (max-width:$screen-sm-max)
 		padding: 15px 0 70px
-	&-main
+	&-wrapper
 		margin-top: 15.6rem
 		color: #fff
 		flex-direction: column
-		@include h-center
+		@include v-center
 		@media screen and (max-width:$screen-xs-min - 1) 
 			margin-top: 12rem
-		&__title
-			max-width: 100%
-			font-size: 8.4rem
-			text-align: center
-			text-transform: uppercase
-			margin: 0 auto 3.2rem
-			color: #19272b
-			text-shadow: 0px 1px 0 rgb(255,255,255),0px -1px 0 rgb(255,255,255),1px 0px 0 rgb(255,255,255),-1px 0px 0 rgb(255,255,255),1px 1px 0 rgb(255,255,255),1px -1px 0 rgb(255,255,255),-1px 1px 0 rgb(255,255,255),-1px -1px 0 rgb(255,255,255)
-			position: relative
-			letter-spacing: 6px
-			transition: all .3s
-			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
-				font-size: 7.5rem
+	&__title
+		max-width: 100%
+		font-size: 8.4rem
+		text-align: center
+		text-transform: uppercase
+		margin: 0 auto 3.2rem
+		color: #19272b
+		text-shadow: 0px 1px 0 rgb(255,255,255),0px -1px 0 rgb(255,255,255),1px 0px 0 rgb(255,255,255),-1px 0px 0 rgb(255,255,255),1px 1px 0 rgb(255,255,255),1px -1px 0 rgb(255,255,255),-1px 1px 0 rgb(255,255,255),-1px -1px 0 rgb(255,255,255)
+		position: relative
+		letter-spacing: 6px
+		transition: all .3s
+		@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+			font-size: 7.5rem
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			font-size: 6.2rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
+			margin-bottom: 5rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			font-size: 5rem
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+			letter-spacing: 3px
+			font-size: 4.2rem
+		@media screen and (max-width:$screen-xs-min - 1) 
+			font-size: 3.1rem
+			letter-spacing: 1px
+		&::before
+			content: 'Креативное агенство'
+			position: absolute
+			top: 0
+			left: 0
+			text-shadow: 0px 0px 13px #C73AB8
+			z-index: -1
+		&:hover
+			color: #fff
+	&__subtitle
+		font-family: "Miratrix", sans-serif
+		font-size: 5.5rem
+		font-weight: normal
+		text-align: center
+		margin-bottom: 8.4rem
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			font-size: 4.5rem
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+			font-size: 3.8rem
+		@media screen and (max-width:$screen-xs-max)
+			margin-bottom: 5rem
+		@media screen and (max-width:$screen-xs-min - 1) 
+			font-size: 2.71rem
+	&__btn
+		max-width: 440px
+		width: 100%
+		max-height: 104px
+		padding: 39px
+		font-family: Montserrat, sans-serif
+		font-size: 2.8rem
+		font-weight: 500
+		margin-bottom: 14.4rem
+		text-align: center
+		@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+			max-width: 400px
+			padding: 35px
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
+			max-width: 350px
+			padding: 30px
+		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+			max-width: 240px
+			padding: 20px
+			margin-bottom: 10rem
+		@media screen and (max-width:$screen-sm-max)
+			font-size: 2.52rem
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
+			max-width: 220px
+			padding: 18px
+		@media screen and (max-width:$screen-xs-min - 1) 
+			max-width: 170px
+			padding: 16px
+			font-size: 2rem
+			margin-bottom: 0
+	&__social
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		position: relative
+		@media screen and (min-width:$screen-md-min) and (max-width:$screen-lg-max)
+			width: 90%
+		@media screen and (max-width:$screen-sm-max)
+			display: none
+		&:after
+			content: ''
+			position: absolute
+			height: 1px
+			width: 100%
+			background: #fff
+			right: -102%
+			top: 50%
+		&:before
+			content: ''
+			position: absolute
+			height: 1px
+			width: 100%
+			background: #fff
+			left: -102%
+			top: 50%
+	&__icon
+		transition: all .3s
+		fill: #fff
+		&:hover
+			fill: $purple
+		&--behance
+			width: 65px
+			height: 65px
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-				font-size: 6.2rem
-			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
-				margin-bottom: 5rem
-			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
-				font-size: 5rem
-			@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
-				letter-spacing: 3px
-				font-size: 4.2rem
-			@media screen and (max-width:$screen-xs-min - 1) 
-				font-size: 3.1rem
-				letter-spacing: 1px
+				width: 45px
+				height: 45px
 			&::before
-				content: 'Креативное агенство'
+				content: ''
 				position: absolute
-				top: 0
-				left: 0
-				text-shadow: 0px 0px 13px #C73AB8
-				z-index: -1
-			&:hover
+				height: 1px
+				width: 100%
 				color: #fff
-		&__subtitle
-			font-family: "Miratrix", sans-serif
-			font-size: 5.5rem
-			font-weight: normal
-			text-align: center
-			margin-bottom: 8.4rem
-			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
-				font-size: 4.5rem
-			@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
-				font-size: 3.8rem
-			@media screen and (max-width:$screen-xs-max)
-				margin-bottom: 5rem
-			@media screen and (max-width:$screen-xs-min - 1) 
-				font-size: 2.71rem
-		&__btn
-			max-width: 440px
-			width: 100%
-			max-height: 104px
-			padding: 39px
-			font-family: Montserrat, sans-serif
-			font-size: 2.8rem
-			font-weight: 500
-			margin-bottom: 14.4rem
-			text-align: center
-			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
-				max-width: 400px
-				padding: 35px
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+		&--inst
+			width: 41px
+			height: 41px
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-				max-width: 350px
-				padding: 30px
-			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
-				max-width: 240px
-				padding: 20px
-				margin-bottom: 10rem
-			@media screen and (max-width:$screen-sm-max)
-				font-size: 2.52rem
-			@media screen and (min-width:$screen-xs-min) and (max-width:$screen-xs-max)
-				max-width: 220px
-				padding: 18px
-			@media screen and (max-width:$screen-xs-min - 1) 
-				max-width: 170px
-				padding: 16px
-				font-size: 2rem
-				margin-bottom: 0
-		&__social
-			display: flex
-			justify-content: space-between
-			align-items: center
-			width: 100%
-			position: relative
-			@media screen and (min-width:$screen-md-min) and (max-width:$screen-lg-max)
-				width: 90%
-			@media screen and (max-width:$screen-sm-max)
-				display: none
-			&:after
+				width: 31px
+				height: 31px
+			&::before
 				content: ''
 				position: absolute
 				height: 1px
 				width: 100%
-				background: #fff
-				right: -102%
+				color: #fff
 				top: 50%
-			&:before
-				content: ''
-				position: absolute
-				height: 1px
-				width: 100%
-				background: #fff
-				left: -102%
-				top: 50%
-		&__icon
-			transition: all .3s
-			fill: #fff
-			&:hover
-				fill: $purple
-			&--behance
-				width: 65px
-				height: 65px
-				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-					width: 45px
-					height: 45px
-				&::before
-					content: ''
-					position: absolute
-					height: 1px
-					width: 100%
-					color: #fff
-					top: 50%
-					transform: translateY(-50%)
-					left: 0
-			&--inst
-				width: 41px
-				height: 41px
-				@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
-					width: 31px
-					height: 31px
-				&::before
-					content: ''
-					position: absolute
-					height: 1px
-					width: 100%
-					color: #fff
-					top: 50%
-					transform: translateY(-50%)
-					right: 0
+				transform: translateY(-50%)
+				right: 0
 

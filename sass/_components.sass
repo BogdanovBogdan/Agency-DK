@@ -13,14 +13,12 @@
 		font-size: 1.7rem
 		text-align: center
 		margin-bottom: 3.3rem
-		@media screen and (max-width:$screen-md-max)
-			line-height: 1.4
 		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
 			font-size: 2rem
 		@media screen and (max-width:$screen-xs-min - 1)
 			font-size: 1.6rem
 	&__input
-		padding: 15px 20px
+		padding: 28px 32px
 		border: solid 1px #ffffff
 		color: #fff
 		background-color: transparent
@@ -136,9 +134,7 @@
 		background-color: #ed6663
 		margin-right: 2rem
 		z-index: 2
-		display: flex
-		justify-content: center
-		align-items: center
+		@include center
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			height: 52px
 			width: 62px
@@ -147,8 +143,7 @@
 			width: 55px
 
 	&-menu
-		display: flex
-		align-items: center
+		@include v-center
 		height: 100%
 		@media screen and (max-width:$screen-sm-max)
 			flex-direction: column
@@ -180,8 +175,7 @@
 		&__link
 			padding: 0 29px
 			height: 100%
-			display: flex
-			align-items: center
+			@include v-center
 			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
 				padding: 0 25px
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
@@ -189,8 +183,7 @@
 
 	&-info
 		height: 100%
-		display: flex
-		align-items: center
+		@include v-center
 		@media screen and (max-width:$screen-sm-max)
 			flex-direction: column
 		&__item

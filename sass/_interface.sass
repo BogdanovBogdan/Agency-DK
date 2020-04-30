@@ -17,7 +17,7 @@ body
 	overflow-x: hidden
 	background: url("../img/background.jpg") center no-repeat #19272c
 	background-size: cover
-	line-height: 1
+	line-height: normal
 
 button
 	text-align: center
@@ -65,8 +65,7 @@ h1, h2, h3, h4
 		padding: 50px 0
 	&__top
 		position: relative
-		display: flex
-		justify-content: center
+		@include h-center
 	&__title 
 		position: relative
 		color: #ffffff
