@@ -87,13 +87,13 @@ window.addEventListener("DOMContentLoaded", () => {
 		const triggerMenu = document.querySelector('.trigger'),
 			navigation = document.querySelector('.nav-container'),
 			navContainer = document.querySelector('.nav-menu-container');
-	
+
 		navContainer.style.zIndex = "-10"
-	
+
 		triggerMenu.addEventListener("click", () => {
 			navigation.classList.toggle('animated');
 			document.querySelector("html").style.overflow == "hidden" ? document.querySelector("html").style.overflow = "" : document.querySelector("html").style.overflow = "hidden";
-			
+
 
 			if (!navigation.classList.contains('animated')) {
 				setTimeout(() => {
@@ -160,10 +160,46 @@ window.addEventListener("DOMContentLoaded", () => {
 			});
 
 		});
-
-
 	};
 	forms();
 
-	
+
+
+
+	// label input animation
+	const inputsWrappers = document.querySelectorAll(".input-wrapper");
+
+	inputsWrappers.forEach(inputWrapper => {
+		const input = inputWrapper.querySelector("input"),
+				clean = inputWrapper.querySelector(".clean");
+
+		input.addEventListener("focus", function () {
+			inputWrapper.classList.add("focused");
+		});
+
+		input.addEventListener("blur", function () {
+			if (!this.value) {
+				inputWrapper.classList.remove("focused");
+				clean.style.display = "none";
+			} else {
+				this.classList.add("filled");
+			}
+		})
+
+		input.addEventListener("input", function () {
+			if (this.value) {
+				clean.style.display = "block";
+			} else {
+				clean.style.display = "none";
+			}
+		});
+
+		clean.addEventListener("click", function () {
+			this.style.display = "none";
+			input.value = "";
+			input.focus();
+		});
+
+	});
+
 });
