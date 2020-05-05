@@ -138,25 +138,33 @@ window.addEventListener("DOMContentLoaded", () => {
 			item.addEventListener('submit', (e) => {
 				e.preventDefault()
 
-				let statusMessage = document.createElement('div');
-				statusMessage.classList.add('status');
-				item.appendChild(statusMessage);
+				// cancel sending the form if there is no consent to the processing of personal data
+				const checkbox = item.querySelector("#privacy-policy");
+				if (checkbox.checked) {
 
-				const formData = new FormData(item);
+					let statusMessage = document.createElement('div');
+					statusMessage.classList.add('status');
+					item.appendChild(statusMessage);
 
-				postData('assets/server.php', formData)
-					.then(res => {
-						console.log('success: ', res);
-						statusMessage.textContent = message.success;
-					})
-					.catch(() => statusMessage.textContent = message.failure)
-					.finally(() => {
-						clearInputs();
-						setTimeout(() => {
-							statusMessage.remove();
-						}, 4000);
+					const formData = new FormData(item);
 
-					});
+					postData('assets/server.php', formData)
+						.then(res => {
+							console.log('success: ', res);
+							statusMessage.textContent = message.success;
+						})
+						.catch(() => statusMessage.textContent = message.failure)
+						.finally(() => {
+							clearInputs();
+							setTimeout(() => {
+								statusMessage.remove();
+							}, 4000);
+
+						});
+						
+				} else {
+					alert("Пожалуйста, согласитесь с обработкой персональных данных!");
+				}
 			});
 
 		});
@@ -171,7 +179,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	inputsWrappers.forEach(inputWrapper => {
 		const input = inputWrapper.querySelector("input"),
-				clean = inputWrapper.querySelector(".clean");
+			clean = inputWrapper.querySelector(".clean");
 
 		input.addEventListener("focus", function () {
 			inputWrapper.classList.add("focused");
