@@ -99,22 +99,16 @@
 			width: 90%
 		@media screen and (max-width:$screen-sm-max)
 			display: none
-		&:after
-			content: ''
-			position: absolute
-			height: 1px
-			width: 100%
-			background: #fff
+	&__line
+		position: absolute
+		height: 1px
+		width: 100%
+		background: #fff
+		top: 45%
+		&--right
 			right: -102%
-			top: 50%
-		&:before
-			content: ''
-			position: absolute
-			height: 1px
-			width: 100%
-			background: #fff
+		&--left
 			left: -102%
-			top: 50%
 	&__icon
 		transition: all .3s
 		fill: #fff

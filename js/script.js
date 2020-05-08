@@ -161,7 +161,7 @@ window.addEventListener("DOMContentLoaded", () => {
 							}, 4000);
 
 						});
-						
+
 				} else {
 					alert("Пожалуйста, согласитесь с обработкой персональных данных!");
 				}
@@ -209,5 +209,53 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 
 	});
+
+
+
+	// animation for left and right lines of .header__social block
+	const animation1 = gsap.timeline()
+		.from(".header__line--left", {
+			left: "-202%",
+			ease: "back.out(1.05)"
+		})
+		.from(".header__line--right", {
+			right: "-202%",
+			ease: "back.out(1.05)"
+		}, "-= 1");
+
+	const widthBlock = document.querySelector(".header__social").offsetWidth,
+		twoPercent = widthBlock / 100 * 2,
+		widthWindow = document.documentElement.clientWidth,
+		diffHalf = (widthWindow - widthBlock) / 2;
+
+	const animation2 = gsap.timeline()
+		.to(".header__line--left", {
+			left: `calc(-102% - ${diffHalf - twoPercent}px)`
+			// от начальной позиции (-102%) отнять половину разницы между шириной блока (widthBlock) и окна (widthWindow)
+			// затем отнять 2%, чтобы сделать расстояние от левого конца линии до края экрана правильным
+		})
+		.to(".header__line--right", {
+			right: `calc(-102% - ${diffHalf - twoPercent}px)`
+		}, "-= 1")
+
+
+	const controller = new ScrollMagic.Controller();
+	new ScrollMagic.Scene({
+		duration: document.documentElement.clientHeight / 100 * 70,
+		triggerElement: '.header__social',
+		triggerHook: 0.7,
+	})
+		.setTween(animation2)
+		.addTo(controller);
+		// .addIndicators();
+
+	new ScrollMagic.Scene({
+		duration: 0,
+		triggerElement: '.header__social',
+		triggerHook: 0.8,
+	})
+		.setTween(animation1)
+		.addTo(controller);
+		// .addIndicators();
 
 });

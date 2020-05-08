@@ -863,22 +863,16 @@ h1, h2, h3, h4 {
     @media screen and (max-width: 767px) {
       .header__social {
         display: none; } }
-    .header__social:after {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      background: #fff;
-      right: -102%;
-      top: 50%; }
-    .header__social:before {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      background: #fff;
-      left: -102%;
-      top: 50%; }
+  .header__line {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    top: 45%; }
+    .header__line--right {
+      right: -102%; }
+    .header__line--left {
+      left: -102%; }
   .header__icon {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
