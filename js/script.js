@@ -216,38 +216,33 @@ window.addEventListener("DOMContentLoaded", () => {
 	const animation1 = gsap.timeline()
 		.from(".header__line--left", {
 			left: "-202%",
-			ease: "back.out(1.05)"
+			ease: "back.out(0.5)"
 		})
 		.from(".header__line--right", {
 			right: "-202%",
-			ease: "back.out(1.05)"
+			ease: "back.out(0.5)"
 		}, "-= 1");
 
 	const widthBlock = document.querySelector(".header__social").offsetWidth,
-		twoPercent = widthBlock / 100 * 2,
 		widthWindow = document.documentElement.clientWidth,
-		diffHalf = (widthWindow - widthBlock) / 2;
-
+		diffHalf = 102 + ( (widthWindow - widthBlock) / (widthBlock / 100) ) / 2; 
+		// (widthWindow - widthBlock) / (widthBlock / 100) / 2 - оставшееся растояние от widthBlock и widthWindow переведенное в проценты
+		// и разделенное на 2, т.к. разница расстояния от widthBlock и widthWindow равномерно распределяется по краям
+		// затем прибавили исходное состояние линий - 102% 
+		
 	const animation2 = gsap.timeline()
-		.to(".header__line--left", {
-			left: `calc(-102% - ${diffHalf - twoPercent}px)`
-			// от начальной позиции (-102%) отнять половину разницы между шириной блока (widthBlock) и окна (widthWindow)
-			// затем отнять 2%, чтобы сделать расстояние от левого конца линии до края экрана правильным
+		.fromTo(".header__line--left", {
+			left: '-102%'
+		}, {
+			left: `-${diffHalf}%`
 		})
-		.to(".header__line--right", {
-			right: `calc(-102% - ${diffHalf - twoPercent}px)`
+		.fromTo(".header__line--right", {
+			right: '-102%'
+		}, {
+			right: `-${diffHalf}%`
 		}, "-= 1")
-
-
+	
 	const controller = new ScrollMagic.Controller();
-	new ScrollMagic.Scene({
-		duration: document.documentElement.clientHeight / 100 * 70,
-		triggerElement: '.header__social',
-		triggerHook: 0.7,
-	})
-		.setTween(animation2)
-		.addTo(controller);
-		// .addIndicators();
 
 	new ScrollMagic.Scene({
 		duration: 0,
@@ -256,6 +251,14 @@ window.addEventListener("DOMContentLoaded", () => {
 	})
 		.setTween(animation1)
 		.addTo(controller);
-		// .addIndicators();
+
+	new ScrollMagic.Scene({
+		duration: document.documentElement.clientHeight / 100 * 70,
+		triggerElement: '.header__social',
+		triggerHook: 0.7,
+	})
+		.setTween(animation2)
+		.addTo(controller);
+
 
 });
