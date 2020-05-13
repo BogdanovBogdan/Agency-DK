@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 					const formData = new FormData(item);
 
-					postData('assets/server.php', formData)
+					postData('../contact.php', formData)
 						.then(res => {
 							console.log('success: ', res);
 							statusMessage.textContent = message.success;
