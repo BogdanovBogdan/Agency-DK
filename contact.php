@@ -6,8 +6,8 @@
 		// $email = trim($_POST['email']);
 		// $email = htmlspecialchars($_POST['email']);
 		// $message = htmlspecialchars($_POST['message']);
-		$name = htmlspecialchars($_POST['user-name']);
-		$tel = htmlspecialchars($_POST['user-phone']);
+		$name = htmlspecialchars($_POST['name']);
+		$tel = htmlspecialchars($_POST['phone']);
 		$error = '';
 
 		if(!$name) {
