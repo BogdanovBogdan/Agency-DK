@@ -29,6 +29,8 @@
 		flex-direction: column
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			flex: 0 1 45%
+		@media screen and (max-width:$screen-sm-max)
+			margin-bottom: 10rem
 		&__item
 			font-size: 3rem
 			text-align: left
@@ -37,7 +39,7 @@
 			align-items: center
 			justify-content: left
 			&:not(:last-child)
-				margin-bottom: 7.2rem
+				margin-bottom: 6.2rem
 			@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 				font-size: 2.5rem
 			@media screen and (max-width:$screen-sm-max)
@@ -104,15 +106,16 @@
 					width: 30px
 	&__form
 		border: solid 4px $purple
-		padding: 61px 68px 59px
+		padding: 50px 74px 44px
 		color: #fff
 		flex: 0 1 50%
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			flex: 0 1 55%
 			padding: 40px 25px
 		@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
-			max-width: 400px
+			max-width: 500px
+		@media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max)
+			padding: 40px 60px
 		@media screen and (max-width:$screen-xs-min - 1) 
-			margin-top: 10rem
-			padding: 30px 25px
-			max-width: 340px
+			padding: 30px 40px
+			max-width: 400px

@@ -21,7 +21,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		const triggers = document.querySelectorAll(triggerSelectors),
 			modal = document.querySelector(modalSelector),
 			close = document.querySelector(closeSelector),
-			scrollWidth = calcScroll();
+			scrollWidth = calcScroll(),
+			modalWindow = modal.querySelector(".popup__modal");
 
 		triggers.forEach(item => {
 			item.addEventListener("click", (e) => {
@@ -29,22 +30,36 @@ window.addEventListener("DOMContentLoaded", () => {
 					e.preventDefault();
 				}
 				modal.style.display = "block";
+				modalWindow.classList.remove("fadeOutDown");
+				modalWindow.classList.add("fadeInUp");
 				document.querySelector("html").style.overflow = "hidden";
 				document.querySelector("html").style.marginRight = `${scrollWidth}px`;
 			});
 		});
 
 		close.addEventListener("click", () => {
-			modal.style.display = "none";
-			document.querySelector("html").style.overflow = "";
-			document.querySelector("html").style.marginRight = `0px`;
+			modalWindow.classList.remove("fadeInUp");
+			modalWindow.classList.add("fadeOutDown");
+
+			const timeout = window.getComputedStyle(modalWindow).animationDuration.split("s")[0];
+			setTimeout(() => {
+				modal.style.display = "none";
+				document.querySelector("html").style.overflow = "";
+				document.querySelector("html").style.marginRight = `0px`;
+			}, timeout * 1000);
 		});
 
 		modal.addEventListener("click", (e) => {
 			if (e.target === modal) {
-				modal.style.display = "none";
-				document.querySelector("html").style.overflow = "";
-				document.querySelector("html").style.marginRight = `0px`;
+				modalWindow.classList.remove("fadeInUp");
+				modalWindow.classList.add("fadeOutDown");
+
+				const timeout = window.getComputedStyle(modalWindow).animationDuration.split("s")[0];
+				setTimeout(() => {
+					modal.style.display = "none";
+					document.querySelector("html").style.overflow = "";
+					document.querySelector("html").style.marginRight = `0px`;
+				}, timeout * 1000);
 			}
 		});
 	};
@@ -83,27 +98,35 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 	// animation burger menu
-	if (window.innerWidth < 768) {
-		const triggerMenu = document.querySelector('.trigger'),
-			navigation = document.querySelector('.nav-container'),
-			navContainer = document.querySelector('.nav-menu-container');
+	["resize", "load"].forEach(eventName => {
+		window.addEventListener(eventName, () => {
+			if (window.innerWidth < 768) {
+				const triggerMenu = document.querySelector('.trigger'),
+					navigation = document.querySelector('.nav-container'),
+					navContainer = document.querySelector('.nav-menu-container');
 
-		navContainer.style.zIndex = "-10"
+				const checkZIndex = timeout => {
+					setTimeout((() => {
+						if (!navigation.classList.contains('animated')) {
+							setTimeout(() => {
+								console.log("-10");
+								navContainer.style.zIndex = "-10";
+							}, timeout);
+						} else {
+							navContainer.style.zIndex = "2";
+						}
+					}), 1)
+				};
+				checkZIndex(1);
 
-		triggerMenu.addEventListener("click", () => {
-			navigation.classList.toggle('animated');
-			document.querySelector("html").style.overflow == "hidden" ? document.querySelector("html").style.overflow = "" : document.querySelector("html").style.overflow = "hidden";
-
-
-			if (!navigation.classList.contains('animated')) {
-				setTimeout(() => {
-					navContainer.style.zIndex = "-10";
-				}, 1000);
-			} else {
-				navContainer.style.zIndex = "2";
-			}
+				triggerMenu.addEventListener("click", () => {
+					navigation.classList.toggle('animated');
+					document.querySelector("html").style.overflow == "hidden" ? document.querySelector("html").style.overflow = "" : document.querySelector("html").style.overflow = "hidden";
+					checkZIndex(1000);
+				});
+			};
 		});
-	}
+	});
 
 
 
@@ -120,6 +143,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 		const clearInputs = () => {
 			inputs.forEach(item => {
+				try {
+					item.closest(".focused").querySelector(".clean").style.display = "none";
+					item.closest(".focused").classList.remove("focused");
+				} catch (error) { }
 				item.value = '';
 				item.checked = false;
 			})
@@ -189,8 +216,6 @@ window.addEventListener("DOMContentLoaded", () => {
 			if (!this.value) {
 				inputWrapper.classList.remove("focused");
 				clean.style.display = "none";
-			} else {
-				this.classList.add("filled");
 			}
 		})
 
@@ -225,11 +250,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	const widthBlock = document.querySelector(".header__social").offsetWidth,
 		widthWindow = document.documentElement.clientWidth,
-		diffHalf = 102 + ( (widthWindow - widthBlock) / (widthBlock / 100) ) / 2; 
-		// (widthWindow - widthBlock) / (widthBlock / 100) / 2 - оставшееся растояние от widthBlock и widthWindow переведенное в проценты
-		// и разделенное на 2, т.к. разница расстояния от widthBlock и widthWindow равномерно распределяется по краям
-		// затем прибавили исходное состояние линий - 102% 
-		
+		diffHalf = 102 + ((widthWindow - widthBlock) / (widthBlock / 100)) / 2;
+	// (widthWindow - widthBlock) / (widthBlock / 100) / 2 - оставшееся растояние от widthBlock и widthWindow переведенное в проценты
+	// и разделенное на 2, т.к. разница расстояния от widthBlock и widthWindow равномерно распределяется по краям
+	// затем прибавили исходное состояние линий - 102% 
+
 	const animation2 = gsap.timeline()
 		.fromTo(".header__line--left", {
 			left: '-102%'
@@ -241,7 +266,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		}, {
 			right: `-${diffHalf}%`
 		}, "-= 1")
-	
+
 	const controller = new ScrollMagic.Controller();
 
 	new ScrollMagic.Scene({

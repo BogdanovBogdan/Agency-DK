@@ -133,12 +133,18 @@
 				min-height: 55px
 				font-size: 2.5rem
 				margin-bottom: 0.5rem
+		&__title--aligned 
+			margin-left: -4px
 		&__desc
 			font-size: 2.4rem
 			font-family: Montserrat, sans-serif
 			font-weight: 600
 			z-index: 1
 			mix-blend-mode: difference
+			@media screen and (min-width:$screen-lg-min) and (max-width:$screen-lg-max)
+				font-size: 2.2rem
+			@media screen and (min-width:$screen-sm-min) and (max-width:$screen-sm-max)
+				font-size: 2.3rem
 			@media screen and (max-width:$screen-xs-max)
 				margin-top: 5px
 		&__info
@@ -146,6 +152,11 @@
 			margin-bottom: 3.2rem
 			@media screen and (max-width:$screen-xs-min - 1) 
 				font-size: 2.33rem
+		&__info--aligned 
+			&:first-child
+				margin-left: 10px
+			&:last-child
+				margin-left: -5px
 		&__btn
 			color: #fff
 			padding: 23px 40px
