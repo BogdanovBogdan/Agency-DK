@@ -180,10 +180,7 @@ h1, h2, h3, h4 {
     margin-bottom: 2.9rem; }
     @media screen and (min-width: 576px) and (max-width: 767px) {
       .form-callback__title {
-        font-size: 4rem; } }
-    @media screen and (max-width: 467px) {
-      .form-callback__title {
-        font-size: 3rem; } }
+        font-size: 3.5rem; } }
   .form-callback__hint {
     font-size: 1.7rem;
     text-align: center;
@@ -243,11 +240,8 @@ h1, h2, h3, h4 {
     .form-callback__checkbox label {
       font-size: 1.4rem;
       position: relative;
-      padding-left: 60px; }
-      @media screen and (max-width: 767px) {
-        .form-callback__checkbox label {
-          font-size: 1.6rem;
-          line-height: 1.3; } }
+      padding-left: 60px;
+      line-height: 1.3; }
       @media screen and (max-width: 467px) {
         .form-callback__checkbox label {
           font-size: 1.3rem; } }
@@ -305,19 +299,17 @@ h1, h2, h3, h4 {
     font-weight: bold;
     font-size: 2rem;
     width: 100%;
-    padding: 26px 0; }
-    @media screen and (min-width: 468px) and (max-width: 575px) {
+    padding: 15px 30px;
+    height: 71px; }
+    @media screen and (max-width: 575px) {
       .form-callback__btn {
-        padding: 18px 0; } }
-    @media screen and (max-width: 467px) {
-      .form-callback__btn {
-        padding: 16px 0; } }
+        height: 50px; } }
 
 .btn-red {
   background-color: #ed6663;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s; }
+  -webkit-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s; }
   .btn-red:hover {
     background-color: #db504c; }
 
@@ -626,8 +618,8 @@ h1, h2, h3, h4 {
       font-size: 2rem; } }
   @media screen and (max-width: 575px) {
     .input-wrapper {
-      font-size: 1.7rem;
-      height: 60px; } }
+      font-size: 1.5rem;
+      height: 55px; } }
   .input-wrapper input {
     position: absolute;
     padding: 26px 32px 6px;
@@ -637,6 +629,9 @@ h1, h2, h3, h4 {
     border: solid 1px #ffffff;
     color: #fff;
     z-index: 1; }
+    @media screen and (max-width: 575px) {
+      .input-wrapper input {
+        padding: 26px 18px 10px; } }
     .input-wrapper input:hover {
       background-color: rgba(199, 58, 184, 0.051); }
     .input-wrapper input:focus {
@@ -651,6 +646,9 @@ h1, h2, h3, h4 {
     -webkit-transition: all 150ms ease-out;
     -o-transition: all 150ms ease-out;
     transition: all 150ms ease-out; }
+    @media screen and (max-width: 575px) {
+      .input-wrapper label {
+        left: 18px; } }
   .input-wrapper .clean {
     position: absolute;
     width: 16px;
@@ -663,6 +661,10 @@ h1, h2, h3, h4 {
     cursor: pointer;
     display: none;
     z-index: 2; }
+    @media screen and (max-width: 575px) {
+      .input-wrapper .clean {
+        width: 12px;
+        height: 12px; } }
     .input-wrapper .clean:before {
       content: '';
       position: absolute;
@@ -695,25 +697,44 @@ h1, h2, h3, h4 {
   font-size: 1.3rem;
   top: 20%; }
 
+.loader {
+  font-size: 0px;
+  position: relative; }
+  .loader:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: loader .7s linear infinite;
+    animation: loader .7s linear infinite; }
+
 .fadeInUp {
   -webkit-animation: fadeInUp .5s;
   animation: fadeInUp .5s; }
 
 @-webkit-keyframes fadeInUp {
   0% {
-    opacity: 0;
-    top: 0%; }
+    opacity: 0; }
+  top: 0%;
   100% {
-    opacity: 1;
-    top: 5%; } }
+    opacity: 1; }
+  top: 5%; }
 
 @keyframes fadeInUp {
   0% {
-    opacity: 0;
-    top: 0%; }
+    opacity: 0; }
+  top: 0%;
   100% {
-    opacity: 1;
-    top: 5%; } }
+    opacity: 1; }
+  top: 5%; }
 
 .fadeOutDown {
   -webkit-animation: fadeOutDown .5s;
@@ -721,19 +742,19 @@ h1, h2, h3, h4 {
 
 @-webkit-keyframes fadeOutDown {
   0% {
-    opacity: 1;
-    top: 5%; }
+    opacity: 1; }
+  top: 5%;
   100% {
-    opacity: 0;
-    top: 0%; } }
+    opacity: 0; }
+  top: 0%; }
 
 @keyframes fadeOutDown {
   0% {
-    opacity: 1;
-    top: 5%; }
+    opacity: 1; }
+  top: 5%;
   100% {
-    opacity: 0;
-    top: 0%; } }
+    opacity: 0; }
+  top: 0%; }
 
 .fadeIn {
   -webkit-animation: fadeIn .5s;
@@ -750,6 +771,22 @@ h1, h2, h3, h4 {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg); } }
+
+@keyframes loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg); } }
 
 .header {
   padding: 38px 0 118px; }
@@ -1623,7 +1660,7 @@ h1, h2, h3, h4 {
         padding: 40px 60px; } }
     @media screen and (max-width: 467px) {
       .contacts__form {
-        padding: 30px 40px;
+        padding: 30px 35px;
         max-width: 400px; } }
 
 .popup {
@@ -1642,7 +1679,7 @@ h1, h2, h3, h4 {
     left: 50%;
     margin-bottom: 3%;
     max-width: 557px;
-    width: 100%;
+    width: 90%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -1652,6 +1689,9 @@ h1, h2, h3, h4 {
       .popup__modal {
         max-width: 410px;
         padding: 40px 50px; } }
+    @media screen and (max-width: 467px) {
+      .popup__modal {
+        padding: 30px 35px; } }
   .popup__close {
     position: absolute;
     right: 20px;
@@ -1661,6 +1701,10 @@ h1, h2, h3, h4 {
     width: 32px;
     padding: 8px;
     cursor: pointer; }
+    @media screen and (max-width: 575px) {
+      .popup__close {
+        right: 10px;
+        top: 10px; } }
     .popup__close:before {
       content: '';
       position: absolute;
@@ -1703,19 +1747,16 @@ h1, h2, h3, h4 {
     font-size: 2rem;
     width: 100%;
     height: 71px;
-    color: #fff; }
-    @media screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 15px 30px;
+    color: #ffffff; }
+    @media screen and (max-width: 575px) {
       .popup__btn {
         height: 50px; } }
   .popup-callback {
     display: none; }
-    .popup-callback__checkbox span {
-      border: 1px solid #c73ab8; }
-    .popup-callback__btn {
-      color: #fff; }
-  .popup-success {
+  .popup-notification {
     display: none; }
-    .popup-success__modal {
+    .popup-notification__modal {
       top: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
