@@ -65,6 +65,13 @@ window.addEventListener("DOMContentLoaded", () => {
 	};
 	bindModals("#callback-request", ".popup-callback", ".popup-callback .popup__close");
 
+	// close by click popup-notification
+	const popupNotificat = document.querySelector(".popup-notification");
+	popupNotificat.addEventListener("click", (e) => {
+		if (e.target == popupNotificat || e.target.classList.contains("popup__close") || e.target.classList.contains("popup__btn")) {
+			popupNotificat.style.display = "none";
+		};
+	});
 
 
 	// smooth scrolling to anchors
@@ -136,9 +143,10 @@ window.addEventListener("DOMContentLoaded", () => {
 			inputs = document.querySelectorAll("input");
 
 		const message = {
-			loading: 'Загрузка...',
-			success: 'Спасибо! Скоро мы с вами свяжемся',
-			failure: 'Что-то пошло не так...'
+			successTitle: 'Ваша заявка успешно отправлена',
+			successHint: 'Мы перезвоним Вам в течени 15 минут.<br>Спасибо, что выбираете качественный продукт',
+			failureTitle: 'Что-то пошло не так...',
+			failureHint: 'Попробуйте повторить позже.'
 		};
 
 		const clearInputs = () => {
@@ -152,8 +160,11 @@ window.addEventListener("DOMContentLoaded", () => {
 			})
 		};
 
-		const postData = async (url, data) => {
-			document.querySelector('.status').textContent = message.loading;
+		const postData = async (url, data, btnLoad) => {
+			const heightBtn = window.getComputedStyle(btnLoad).height;
+			btnLoad.style.minHeight = heightBtn;
+			btnLoad.classList.add("loader");
+			
 			let res = await fetch(url, {
 				method: "post",
 				body: data
@@ -166,26 +177,36 @@ window.addEventListener("DOMContentLoaded", () => {
 				e.preventDefault()
 
 				// cancel sending the form if there is no consent to the processing of personal data
-				const checkbox = item.querySelector("#privacy-policy");
+				const checkbox = item.querySelector("[name='privacy-policy']");
 				if (checkbox.checked) {
 
-					let statusMessage = document.createElement('div');
-					statusMessage.classList.add('status');
-					item.appendChild(statusMessage);
+					let notifModal = document.querySelector(".popup-notification"),
+						notifTitle = notifModal.querySelector(".popup__title"),
+						notifHint = notifModal.querySelector(".popup__hint"),
+						btnLoad = item.querySelector('.form-callback__btn');
 
 					const formData = new FormData(item);
 
-					postData('../contact.php', formData)
+					postData('../contact.php', formData, btnLoad)
 						.then(res => {
-							console.log('success: ', res);
-							statusMessage.textContent = message.success;
-						})
-						.catch(() => statusMessage.textContent = message.failure)
-						.finally(() => {
+							console.log('\nSuccess POST\n', res);
+							notifModal.style.display = "block";
+							notifTitle.innerHTML = message.successTitle;
+							notifHint.innerHTML = message.successHint;
 							clearInputs();
+						})
+						.catch(() => {
+							console.log('\nFailure POST\n');
+							notifModal.style.display = "block";
+							notifTitle.innerHTML = message.failureTitle;
+							notifHint.innerHTML = message.failureHint;
+						})
+						.finally(() => {
+							btnLoad.style.minHeight = "";
+							btnLoad.classList.remove("loader");
 							setTimeout(() => {
-								statusMessage.remove();
-							}, 4000);
+								notifModal.style.display = "none";
+							}, 5000);
 
 						});
 
