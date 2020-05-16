@@ -263,9 +263,10 @@ h1, h2, h3, h4 {
   .popup-callback {
     display: none; }
     .popup-callback__checkbox span {
-      border: 1px solid #c73ab8; }
+      border: 1px solid #c73ab8 !important; }
   .popup-notification {
-    display: none; }
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7); }
     .popup-notification__modal {
       top: 50%;
       -webkit-transform: translate(-50%, -50%);

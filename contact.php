@@ -24,8 +24,7 @@
 			$header = "Content-Type: text/plain; charset=utf-8\n";
 
 			$header .= "From: Новая заявка <example@gmail.com>\n\n";
-			// $to = "kaminskiispace@yandex.ru";
-			$to = "BogdanovBgdn@yandex.ru";
+			$to = "kaminskiispace@mail.ru";
 			$mail = mail($to, $subject1, iconv ('utf-8', 'windows-1251', $message1), iconv ('utf-8', 'windows-1251', $header));
 			if($mail) {
 				echo 'OK';
