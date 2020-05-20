@@ -381,6 +381,7 @@ h1, h2, h3, h4 {
         display: block;
         width: 16px;
         height: 16px;
+        border: 1px solid #c73ab8;
         border-radius: 50%;
         -webkit-box-shadow: 1px 1px 5px 0px rgba(57, 57, 57, 0.4);
         box-shadow: 1px 1px 5px 0px rgba(57, 57, 57, 0.4);
@@ -394,8 +395,7 @@ h1, h2, h3, h4 {
         -o-transition: .25s .03s ease-in-out;
         transition: .25s .03s ease-in-out; }
       .form-callback__checkbox span:hover {
-        cursor: pointer;
-        border: 1px solid #c73ab8; }
+        cursor: pointer; }
   .form-callback__btn {
     text-align: center;
     font-weight: bold;
@@ -916,7 +916,7 @@ h1, h2, h3, h4 {
         margin-top: 12rem; } }
   .header__title {
     max-width: 100%;
-    font-size: 8.4rem;
+    font-size: 7.9rem;
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto 1.9rem;
@@ -929,26 +929,26 @@ h1, h2, h3, h4 {
     transition: all .3s; }
     @media screen and (min-width: 992px) and (max-width: 1169px) {
       .header__title {
-        font-size: 7.5rem; } }
+        font-size: 7.3rem; } }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .header__title {
-        font-size: 6.2rem; } }
+        font-size: 6rem; } }
     @media screen and (min-width: 576px) and (max-width: 991px) {
       .header__title {
         margin-bottom: 5rem; } }
     @media screen and (min-width: 576px) and (max-width: 767px) {
       .header__title {
-        font-size: 5rem; } }
+        font-size: 4.7rem; } }
     @media screen and (min-width: 468px) and (max-width: 575px) {
       .header__title {
         letter-spacing: 3px;
-        font-size: 4.2rem; } }
+        font-size: 4rem; } }
     @media screen and (max-width: 467px) {
       .header__title {
-        font-size: 3.1rem;
+        font-size: 3rem;
         letter-spacing: 1px; } }
     .header__title::before {
-      content: 'Креативное агенство';
+      content: 'Креативное агентство';
       position: absolute;
       top: 0;
       left: 0;
