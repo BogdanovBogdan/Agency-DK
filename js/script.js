@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", function () {
 	"use strict";
 
 	const calcScroll = () => {
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 		const closeModal = () => {
 			modal.style.display = "none";
-			
+
 			if (!document.querySelector(".nav-container.animated")) {
 				document.querySelector("html").style.overflow = "";
 				document.querySelector("html").style.marginRight = `0px`;
@@ -118,32 +118,44 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 	// animation burger menu
+	let isSetEvent = false;
+
 	["resize", "load"].forEach(eventName => {
 		window.addEventListener(eventName, () => {
+			const navigation = document.querySelector('.nav-container'),
+				navContainer = document.querySelector('.nav-menu-container');
+
 			if (window.innerWidth < 768) {
-				const triggerMenu = document.querySelector('.trigger'),
-					navigation = document.querySelector('.nav-container'),
-					navContainer = document.querySelector('.nav-menu-container');
+				const triggerMenu = document.querySelector('.trigger');
 
 				navContainer.style.pointerEvents = "none";
 
 				let transitionActive = false
 				const durationTransition = window.getComputedStyle(triggerMenu.nextElementSibling).transitionDuration.split("s")[0];
 
-				triggerMenu.addEventListener("click", () => {
+				// exiting only one time, if event Click not yet set 
+				if (!isSetEvent) {
+					triggerMenu.addEventListener("click", () => {
 
-					if (transitionActive) return false
+						// if animation yet not finished, return false
+						if (transitionActive) return false
 
-					navigation.classList.toggle('animated');
-					navContainer.style.pointerEvents = navContainer.style.pointerEvents === "none" ? "" : "none";
-					document.querySelector("html").style.overflow = document.querySelector("html").style.overflow === "" ? "hidden" : "";
+						navigation.classList.toggle('animated');
+						navContainer.style.pointerEvents = navContainer.style.pointerEvents === "none" ? "" : "none";
+						document.querySelector("html").style.overflow = document.querySelector("html").style.overflow === "" ? "hidden" : "";
 
-					transitionActive = true;
-					setTimeout(() => {
-						transitionActive = false;
-					}, durationTransition * 1000)
-				});
-			};
+						transitionActive = true;
+						setTimeout(() => {
+							transitionActive = false;
+						}, durationTransition * 1000)
+					})
+
+					isSetEvent = true;
+				};
+			} else {
+				navigation.classList.remove('animated');
+				navContainer.style.pointerEvents = "";
+			}
 		});
 	});
 
