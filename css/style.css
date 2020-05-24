@@ -824,19 +824,19 @@ h1, h2, h3, h4 {
 
 @-webkit-keyframes fadeInUp {
   0% {
-    opacity: 0; }
-  top: 0%;
+    opacity: 0;
+    top: 0%; }
   100% {
-    opacity: 1; }
-  top: 5%; }
+    opacity: 1;
+    top: 5%; } }
 
 @keyframes fadeInUp {
   0% {
-    opacity: 0; }
-  top: 0%;
+    opacity: 0;
+    top: 0%; }
   100% {
-    opacity: 1; }
-  top: 5%; }
+    opacity: 1;
+    top: 5%; } }
 
 .fadeOutDown {
   -webkit-animation: fadeOutDown .5s;
@@ -844,19 +844,19 @@ h1, h2, h3, h4 {
 
 @-webkit-keyframes fadeOutDown {
   0% {
-    opacity: 1; }
-  top: 5%;
+    opacity: 1;
+    top: 5%; }
   100% {
-    opacity: 0; }
-  top: 0%; }
+    opacity: 0;
+    top: 0%; } }
 
 @keyframes fadeOutDown {
   0% {
-    opacity: 1; }
-  top: 5%;
+    opacity: 1;
+    top: 5%; }
   100% {
-    opacity: 0; }
-  top: 0%; }
+    opacity: 0;
+    top: 0%; } }
 
 .fadeIn {
   -webkit-animation: fadeIn .5s;

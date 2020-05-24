@@ -31,18 +31,18 @@ window.addEventListener("DOMContentLoaded", () => {
 			modalWindow.classList.add("fadeInUp");
 
 			if (!document.querySelector(".nav-container.animated")) {
-				console.log("not animated")
 				document.querySelector("html").style.overflow = "hidden";
 				document.querySelector("html").style.marginRight = `${scrollWidth}px`;
 			}
 		};
 
 		const closeModal = () => {
+			modal.style.display = "none";
+			
 			if (!document.querySelector(".nav-container.animated")) {
 				document.querySelector("html").style.overflow = "";
 				document.querySelector("html").style.marginRight = `0px`;
 			}
-			modal.style.display = "none";
 		};
 
 		triggers.forEach(item => {
