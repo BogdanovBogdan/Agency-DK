@@ -16,6 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
+
 	// modals
 	const bindModals = (triggerSelectors, modalSelector, closeSelector) => {
 		const triggers = document.querySelectorAll(triggerSelectors),
@@ -24,16 +25,32 @@ window.addEventListener("DOMContentLoaded", () => {
 			scrollWidth = calcScroll(),
 			modalWindow = modal.querySelector(".popup__modal");
 
+		const openModal = () => {
+			modal.style.display = "block";
+			modalWindow.classList.remove("fadeOutDown");
+			modalWindow.classList.add("fadeInUp");
+
+			if (!document.querySelector(".nav-container.animated")) {
+				console.log("not animated")
+				document.querySelector("html").style.overflow = "hidden";
+				document.querySelector("html").style.marginRight = `${scrollWidth}px`;
+			}
+		};
+
+		const closeModal = () => {
+			if (!document.querySelector(".nav-container.animated")) {
+				document.querySelector("html").style.overflow = "";
+				document.querySelector("html").style.marginRight = `0px`;
+			}
+			modal.style.display = "none";
+		};
+
 		triggers.forEach(item => {
 			item.addEventListener("click", (e) => {
 				if (e.target) {
 					e.preventDefault();
 				}
-				modal.style.display = "block";
-				modalWindow.classList.remove("fadeOutDown");
-				modalWindow.classList.add("fadeInUp");
-				document.querySelector("html").style.overflow = "hidden";
-				document.querySelector("html").style.marginRight = `${scrollWidth}px`;
+				openModal();
 			});
 		});
 
@@ -43,9 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			const timeout = window.getComputedStyle(modalWindow).animationDuration.split("s")[0];
 			setTimeout(() => {
-				modal.style.display = "none";
-				document.querySelector("html").style.overflow = "";
-				document.querySelector("html").style.marginRight = `0px`;
+				closeModal();
 			}, timeout * 1000);
 		});
 
@@ -56,9 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				const timeout = window.getComputedStyle(modalWindow).animationDuration.split("s")[0];
 				setTimeout(() => {
-					modal.style.display = "none";
-					document.querySelector("html").style.overflow = "";
-					document.querySelector("html").style.marginRight = `0px`;
+					closeModal();
 				}, timeout * 1000);
 			}
 		});
@@ -112,24 +125,23 @@ window.addEventListener("DOMContentLoaded", () => {
 					navigation = document.querySelector('.nav-container'),
 					navContainer = document.querySelector('.nav-menu-container');
 
-				const checkZIndex = timeout => {
-					setTimeout((() => {
-						if (!navigation.classList.contains('animated')) {
-							setTimeout(() => {
-								console.log("-10");
-								navContainer.style.zIndex = "-10";
-							}, timeout);
-						} else {
-							navContainer.style.zIndex = "2";
-						}
-					}), 1)
-				};
-				checkZIndex(1);
+				navContainer.style.pointerEvents = "none";
+
+				let transitionActive = false
+				const durationTransition = window.getComputedStyle(triggerMenu.nextElementSibling).transitionDuration.split("s")[0];
 
 				triggerMenu.addEventListener("click", () => {
+
+					if (transitionActive) return false
+
 					navigation.classList.toggle('animated');
-					document.querySelector("html").style.overflow == "hidden" ? document.querySelector("html").style.overflow = "" : document.querySelector("html").style.overflow = "hidden";
-					checkZIndex(1000);
+					navContainer.style.pointerEvents = navContainer.style.pointerEvents === "none" ? "" : "none";
+					document.querySelector("html").style.overflow = document.querySelector("html").style.overflow === "" ? "hidden" : "";
+
+					transitionActive = true;
+					setTimeout(() => {
+						transitionActive = false;
+					}, durationTransition * 1000)
 				});
 			};
 		});
@@ -164,7 +176,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			const heightBtn = window.getComputedStyle(btnLoad).height;
 			btnLoad.style.minHeight = heightBtn;
 			btnLoad.classList.add("loader");
-			
+
 			let res = await fetch(url, {
 				method: "post",
 				body: data
