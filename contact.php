@@ -13,18 +13,17 @@
 		
 		if(!$error) {
 
+			$subject ="Новая заявка с сайта kaminskii.space";
+			$subject1 = "=?utf-8?b?". base64_encode($subject) ."?="; // title
 
-			$name_tema = "=?utf-8?b?". base64_encode($name) ."?=";
+			$message1 ="\n\nИмя: ".$name."\n\nНомер телефона: " .$tel."\n\n"; // body message
 
-			$subject ="Новая заявка с сайта Agency.DK";
-			$subject1 = "=?utf-8?b?". base64_encode($subject) ."?=";
-
-			$message1 ="\n\nName: ".$name."\n\nPhone: " .$tel."\n\n";
-
-			$header = "Content-Type: text/plain; charset=utf-8\n";
-
-			$header .= "From: Новая заявка <example@gmail.com>\n\n";
+			$headers = "MIME-Version: 1.0\r\n";
+			$headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+			$headers .= "From: kaminskii.space/\r\n";
+			
 			$to = "kaminskiispace@mail.ru";
+
 			$mail = mail($to, $subject1, iconv ('utf-8', 'windows-1251', $message1), iconv ('utf-8', 'windows-1251', $header));
 			if($mail) {
 				echo 'OK';
@@ -35,4 +34,3 @@
 			echo 'error';	
 		}
 	}
-?>
