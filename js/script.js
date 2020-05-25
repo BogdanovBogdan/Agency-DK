@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	};
-	bindModals("#callback-request", ".popup-callback", ".popup-callback .popup__close");
+	bindModals(".callback-btn", ".popup-callback", ".popup-callback .popup__close");
 
 	// close by click popup-notification
 	const popupNotificat = document.querySelector(".popup-notification");
