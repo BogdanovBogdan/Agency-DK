@@ -15,9 +15,15 @@ body
 	font-family: 'Intro', sans-serif
 	font-size: 1.6rem
 	overflow-x: hidden
-	background: url("../img/background.jpg") center no-repeat #19272c
+	background: #19272c
 	background-size: cover
 	line-height: normal
+
+html.webp body
+	background: url("../img/background.webp") center no-repeat
+	
+html.no-webp body, body.no-js // if js on the client side is disabled
+	background: url("../img/background.jpg") center no-repeat
 
 button
 	text-align: center

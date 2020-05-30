@@ -78,7 +78,6 @@
 			&--one
 				border-color: $white
 				position: relative
-				background: url('../img/card-bg.jpg') top center no-repeat #17292b
 				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex: 0 1 45%
 					margin-right: 3rem
@@ -91,7 +90,6 @@
 			&--two
 				border-color: $purple
 				position: relative
-				background: url('../img/card-bg.jpg') bottom center no-repeat #17292b
 				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex: 0 1 45%
 				@media screen and (max-width:$screen-xs-min - 1) 
@@ -105,7 +103,6 @@
 			&--three
 				border-color: $red
 				position: relative
-				background: url('../img/card-bg-rectangle.jpg') left center no-repeat #17292b
 				@media screen and (min-width:$screen-sm-min) and (max-width:$screen-md-max)
 					flex-basis: 48%
 					margin-top: 3rem
@@ -174,6 +171,18 @@
 				font-size: 2rem
 
 
+.webp .services-card__item
+	&--one
+		background: url('../img/card-bg.webp') top center no-repeat #17292b
+	&--two
+		background: url('../img/card-bg.webp') bottom center no-repeat #17292b
+	&--three
+		background: url('../img/card-bg-rectangle.webp') left center no-repeat #17292b
 
-
-
+.no-webp .services-card__item, .no-js .services-card__item
+	&--one
+		background: url('../img/card-bg.jpg') top center no-repeat #17292b
+	&--two
+		background: url('../img/card-bg.jpg') bottom center no-repeat #17292b
+	&--three
+		background: url('../img/card-bg-rectangle.jpg') left center no-repeat #17292b

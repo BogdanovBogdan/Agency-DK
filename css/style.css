@@ -68,9 +68,15 @@ body {
   font-family: 'Intro', sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
-  background: url("../img/background.jpg") center no-repeat #19272c;
+  background: #19272c;
   background-size: cover;
   line-height: normal; }
+
+html.webp body {
+  background: url("../img/background.webp") center no-repeat; }
+
+html.no-webp body, body.no-js {
+  background: url("../img/background.jpg") center no-repeat; }
 
 button {
   text-align: center;
@@ -1317,7 +1323,7 @@ h1, h2, h3, h4 {
   -o-transition: all .3s;
   transition: all .3s;
   position: relative;
-  background: url(../img/card-bg.jpg) center/cover no-repeat #1a242c; }
+  background: #1a242c; }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     .portfolio__btn {
       padding: 18px 35px; } }
@@ -1333,6 +1339,12 @@ h1, h2, h3, h4 {
       font-size: 2rem; } }
   .portfolio__btn:hover {
     background: #c73ab8 center/cover; }
+
+.webp .portfolio__btn {
+  background: url(../img/card-bg.webp) center/cover no-repeat; }
+
+.no-webp .portfolio__btn, .no-js .portfolio__btn {
+  background: url(../img/card-bg.jpg) center/cover no-repeat; }
 
 .animation-up:hover > .portfolio-works__title {
   top: -100%; }
@@ -1470,8 +1482,7 @@ h1, h2, h3, h4 {
       box-sizing: content-box; }
     .services-card__item--one {
       border-color: #fdfeff;
-      position: relative;
-      background: url("../img/card-bg.jpg") top center no-repeat #17292b; }
+      position: relative; }
       @media screen and (min-width: 576px) and (max-width: 991px) {
         .services-card__item--one {
           -webkit-box-flex: 0;
@@ -1488,8 +1499,7 @@ h1, h2, h3, h4 {
         width: 100%; }
     .services-card__item--two {
       border-color: #c73ab8;
-      position: relative;
-      background: url("../img/card-bg.jpg") bottom center no-repeat #17292b; }
+      position: relative; }
       @media screen and (min-width: 576px) and (max-width: 991px) {
         .services-card__item--two {
           -webkit-box-flex: 0;
@@ -1508,8 +1518,7 @@ h1, h2, h3, h4 {
         width: 100%; }
     .services-card__item--three {
       border-color: #ed6663;
-      position: relative;
-      background: url("../img/card-bg-rectangle.jpg") left center no-repeat #17292b; }
+      position: relative; }
       @media screen and (min-width: 576px) and (max-width: 991px) {
         .services-card__item--three {
           -ms-flex-preferred-size: 48%;
@@ -1588,6 +1597,24 @@ h1, h2, h3, h4 {
       .services-card__btn {
         padding: 16px 40px;
         font-size: 2rem; } }
+
+.webp .services-card__item--one {
+  background: url("../img/card-bg.webp") top center no-repeat #17292b; }
+
+.webp .services-card__item--two {
+  background: url("../img/card-bg.webp") bottom center no-repeat #17292b; }
+
+.webp .services-card__item--three {
+  background: url("../img/card-bg-rectangle.webp") left center no-repeat #17292b; }
+
+.no-webp .services-card__item--one, .no-js .services-card__item--one {
+  background: url("../img/card-bg.jpg") top center no-repeat #17292b; }
+
+.no-webp .services-card__item--two, .no-js .services-card__item--two {
+  background: url("../img/card-bg.jpg") bottom center no-repeat #17292b; }
+
+.no-webp .services-card__item--three, .no-js .services-card__item--three {
+  background: url("../img/card-bg-rectangle.jpg") left center no-repeat #17292b; }
 
 .contacts {
   font-family: "Montserrat", sans-serif; }

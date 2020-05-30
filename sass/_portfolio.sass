@@ -187,7 +187,7 @@
 		border: .5rem solid $purple
 		transition: all .3s
 		position: relative
-		background: url(../img/card-bg.jpg) center / cover no-repeat #1a242c
+		background: #1a242c
 		@media screen and (min-width:$screen-md-min) and (max-width:$screen-md-max)
 			padding: 18px 35px
 		@media screen and (max-width:$screen-sm-max)
@@ -199,7 +199,13 @@
 			font-size: 2rem
 		&:hover
 			background: $purple center / cover
-		
+
+.webp .portfolio__btn
+	background: url(../img/card-bg.webp) center / cover no-repeat
+
+.no-webp .portfolio__btn, .no-js .portfolio__btn
+	background: url(../img/card-bg.jpg) center / cover no-repeat
+	
 .animation
 	&-up:hover
 		> .portfolio-works__title
