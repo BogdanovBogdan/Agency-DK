@@ -10,7 +10,7 @@ html
 		font-size: 8px
 	@media screen and (max-width:$screen-sm-max)
 		font-size: 7px
-
+	
 body
 	font-family: 'Intro', sans-serif
 	font-size: 1.6rem
@@ -21,8 +21,7 @@ body
 
 html.webp body
 	background: url("../img/background.webp") center no-repeat
-	
-html.no-webp body, body.no-js // if js on the client side is disabled
+html.no-webp body, html.no-js body
 	background: url("../img/background.jpg") center no-repeat
 
 button
